@@ -2,6 +2,8 @@ import Showcase from '../../components/Showcase';
 import StepsList from '../../components/StepsList';
 import YoutubeVideosList from '../../components/YoutubeVideosList';
 import FaqsList from '../../components/FaqsList';
+import HeadMeta from '../../components/HeadMeta';
+import { useRouter } from 'next/router';
 
 const BecomeAFoodlancer = () => {
   const steps = [
@@ -87,8 +89,16 @@ const BecomeAFoodlancer = () => {
     { title: 'Foodlaner 4', url: 'https://www.youtube.com/embed/JQ_oDYD3ybk' },
   ];
 
+  const router = useRouter();
+
   return (
     <>
+      <HeadMeta
+        name='Become a Foodlancer'
+        title={`Sell homemade food online at lunch.pk - Become a Foodlancer`}
+        desc={`Lunch.pk offers you guaranteed customers in your area. Turn your cooking passion into your business. Become a foodlancer and start your home based business.`}
+        currentUrl={router.pathname}
+      />
       <Showcase
         title='Join Our Food Passionate Family!'
         desc='If food is your craft and you don’t settle with average taste. you are someone who cooks from the heart. then you are in the right place, we are waiting for you to join our food passionate family. <br /> <span class="d-block mt-3 font-weight-bold">No Investments, No Security Deposits, No Lengthy Procedures</span>'

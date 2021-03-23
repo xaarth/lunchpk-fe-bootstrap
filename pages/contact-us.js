@@ -6,6 +6,8 @@ import Message from '../components/Message';
 import * as Yup from 'yup';
 import { TextInput, TextareaInput } from '../components/Inputs';
 import axios from 'axios';
+import HeadMeta from '../components/HeadMeta';
+import { useRouter } from 'next/router';
 
 const Contact = () => {
   const faqs = [
@@ -43,10 +45,19 @@ const Contact = () => {
     },
   ];
 
+  const router = useRouter();
+
   const [message, setMessage] = useState({});
 
   return (
     <>
+      <HeadMeta
+        name='Contact'
+        title='Contact | Lunch.pk Homemade Healthy Food'
+        desc='Lunch.pk, for any queries please send us a message, an email or give us a call.'
+        currentUrl={router.pathname}
+      />
+
       <section
         className=''
         style={{

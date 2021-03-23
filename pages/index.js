@@ -5,6 +5,7 @@ import HomeCorporateMenu from '../components/HomeCorporateMenu';
 import HomeMenus from '../components/HomeMenus';
 import HomeFoodlancer from '../components/HomeFoodlancer';
 import Testimonials from '../components/Testimonials';
+import HeadMeta from '../components/HeadMeta';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
@@ -17,7 +18,8 @@ export default function Home() {
 
   const [location, setLocation] = useState('Near You');
 
-  const { query } = useRouter();
+  const router = useRouter();
+  const { query } = router;
 
   useEffect(() => {
     if (query.loc) {
@@ -28,6 +30,13 @@ export default function Home() {
 
   return (
     <>
+      <HeadMeta
+        name='Home'
+        title='Order Homemade Food Online - Lunch Dinner - Islamabad more'
+        desc='Lunch.pk is Pakistan #1 website to order homemade food, lunch and dinner online. Available in Lahore Karachi Islamabad and more.'
+        currentUrl={router.pathname}
+      />
+
       <Showcase
         title={`Homemade Food by Families ${location}`}
         desc={`At Lunch.pk, You get homemade food by local families ${location.toLowerCase()}. We provide <strong>REAL HYGIENIC</strong> homemade food delivered to your doorstep. Available in Islamabad, Lahore, Karachi and more`}

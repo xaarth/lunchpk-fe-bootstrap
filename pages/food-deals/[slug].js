@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Testimonials from '../../components/Testimonials';
 import axios from 'axios';
 import Link from 'next/link';
+import HeadMeta from '../../components/HeadMeta';
 
 const FoodDealDetail = ({ deal }) => {
   const router = useRouter();
@@ -16,6 +17,12 @@ const FoodDealDetail = ({ deal }) => {
 
   return (
     <>
+      <HeadMeta
+        name={`${deal.name} - Food Deal`}
+        title={`${deal.name} | Home delivery by lunch.pk - Lahore , Islamabad, Karachi`}
+        desc={`Have no time for cooking or tired of low quality food. Enjoy Lunch.pk tasty ${deal.name} deal delivered to your door. Lahore, Islamabad and Karachi`}
+        currentUrl={router.pathname}
+      />
       <section style={{ padding: '7rem 0' }}>
         <Container>
           <Row>

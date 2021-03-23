@@ -4,6 +4,7 @@ import axios from 'axios';
 import Link from 'next/link';
 import Testimonials from '../../components/Testimonials';
 import { Image } from 'react-bootstrap';
+import HeadMeta from '../../components/HeadMeta';
 
 const FrozenFoodDetail = ({ deal }) => {
   const router = useRouter();
@@ -14,6 +15,12 @@ const FrozenFoodDetail = ({ deal }) => {
 
   return (
     <>
+      <HeadMeta
+        name={`${deal.name} - Frozen Food`}
+        title={`${deal.name} | Home delivery by lunch.pk - Lahore , Islamabad, Karachi`}
+        desc={`Have no time for cooking or tired of low quality food. Enjoy Lunch.pk tasty ${deal.name} deal delivered to your door. Lahore, Islamabad and Karachi`}
+        currentUrl={router.pathname}
+      />
       <section style={{ padding: '7rem 0' }}>
         <Container>
           <Row>
@@ -28,7 +35,7 @@ const FrozenFoodDetail = ({ deal }) => {
                 <h4 className='mb-3'>
                   {deal.priceCurrency} {deal.price}
                 </h4>
-                <p className='mb-4'>{deal.description}</p>
+                <p className='mb-2'>{deal.pieces} pieces</p>
                 <p className='font-weight-bold mb-3'>
                   Its not just TASTY. Its HEALTHY too!
                 </p>

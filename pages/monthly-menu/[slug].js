@@ -5,6 +5,7 @@ import MonthlyMenu from '../../components/MonthlyMenu';
 import FaqsList from '../../components/FaqsList';
 import Link from 'next/link';
 import WeeklyTrial from '../../components/WeeklyTrial';
+import HeadMeta from '../../components/HeadMeta';
 
 const MonthlyMenuDetail = ({ menu }) => {
   const router = useRouter();
@@ -64,6 +65,13 @@ const MonthlyMenuDetail = ({ menu }) => {
 
   return (
     <>
+      <HeadMeta
+        name={`${menu.name} - Monthly Menu`}
+        title={`${menu.name} | ${menu.priceCurrency} ${menu.price} |Homemade lunch and dinner delivery service - Islamabad LHR KHI`}
+        desc={`${menu.name} - Lunch.pk is your #1 choice for tasty and healthy homemade food delivered by families near you. Lhr, Isb, and Khi`}
+        currentUrl={router.pathname}
+      />
+
       <section
         style={{
           background: '#f5f8fa',
