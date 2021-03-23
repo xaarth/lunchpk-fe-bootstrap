@@ -1,0 +1,24 @@
+.testimonial-card {
+  margin: 15px;
+  width: 290px;
+  height: 270px;
+  padding: 22px;
+  background: #fff;
+  border-radius: 0.45rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 10px;
+
+  .text {
+    height: 90%;
+
+    p {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+  }
+
+  .meta {
+    h5 {
+      font-weight: 600;
+    }
+  }
+}

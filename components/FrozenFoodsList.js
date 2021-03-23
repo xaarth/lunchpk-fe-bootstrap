@@ -1,0 +1,37 @@
+import DealItem from './DealItem';
+import { Container, Row, Col } from 'react-bootstrap';
+
+const FrozenFoodsList = ({ title, deals }) => {
+  return (
+    <Container>
+      <h1 className='h2 font-weight-bold text-center mb-5'>{title}</h1>
+
+      <Row>
+        {deals.map((deal, index) => (
+          <Col key={index} md={3}>
+            <DealItem
+              title={deal.name}
+              image={deal.image}
+              detailLink={`/frozen-food/${deal.slug}`}
+            >
+              <h3 className='title mb-1'>{deal.name}</h3>
+              <p style={{ fontSize: '14px' }} className='pieces mb-1'>
+                {deal.pieces} pieces
+              </p>
+              <h6 className='delivery-time text-color-primary'>
+                {deal.priceCurrency} {deal.price}
+              </h6>
+            </DealItem>
+          </Col>
+        ))}
+      </Row>
+    </Container>
+  );
+};
+
+FrozenFoodsList.defaultProps = {
+  title: 'FrozenFoods',
+  deals: [],
+};
+
+export default FrozenFoodsList;

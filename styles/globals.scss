@@ -1,0 +1,177 @@
+$primary-color: #ff7a59;
+$primary-light-color: #fff1ee;
+$secondary-color: #2d3e50;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+}
+
+p {
+  line-height: 30px;
+}
+
+.text-color {
+  &-primary {
+    color: $primary-color;
+  }
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 0.4rem 1.7rem 0.4rem;
+  cursor: pointer;
+  font-size: 0.98rem;
+  font-weight: 600;
+  border-radius: 0.1875rem;
+  background: transparent;
+  transition: all 0.3s ease;
+
+  &-primary {
+    color: #fff;
+    background: $primary-color;
+    border: 1px solid $primary-color;
+
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+      opacity: 0.8;
+    }
+  }
+
+  &-outline-primary {
+    background: #fff;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+
+    &:hover,
+    &.active {
+      background: $primary-light-color;
+      text-decoration: none;
+    }
+  }
+
+  &-lg {
+    padding: 13px 34px;
+    font-size: 1.0625rem;
+  }
+}
+
+#main-nav {
+  box-shadow: 0 2px 4px rgba(45, 62, 80, 0.12);
+
+  .navbar-brand {
+    margin-right: 3rem;
+  }
+
+  .nav-link {
+    font-weight: 600;
+  }
+
+  &.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+#main-footer {
+  color: #fff;
+  padding: 3rem 2rem;
+  background: $secondary-color;
+
+  .footer-col-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0 0 0.75rem;
+  }
+
+  .footer-links {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.4rem 0;
+    color: #cbd6e2;
+    transition: all 0.5s ease;
+  }
+}
+
+.input-wrapper {
+  margin-bottom: 18px;
+
+  label {
+    font-size: 14px;
+    color: rgb(61, 79, 88);
+    position: relative;
+    height: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+  }
+}
+
+.form-input {
+  height: 36px;
+  font-size: 14px;
+  line-height: 20px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 0 12px;
+  font-weight: normal;
+  border: 1px solid rgb(184, 196, 194);
+  background-color: rgb(255, 255, 255);
+  color: rgb(33, 49, 60);
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.1rem rgba(184, 196, 194, 0.15);
+  }
+}
+
+textarea.form-input {
+  height: 150px;
+  padding: 8px 12px;
+}
+
+.menu-item-card {
+  display: inline-block;
+  color: #2d3e50;
+
+  &:hover {
+    text-decoration: none;
+    color: #2d3e50;
+  }
+
+  .info {
+    background: #fff;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);
+    padding: 10px;
+
+    .title {
+      font-size: 16px;
+    }
+
+    .desc {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+  }
+}
