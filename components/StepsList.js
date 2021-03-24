@@ -17,7 +17,7 @@ const StepsList = ({ title, ctaText, ctaBtn, ctaBtnLink, steps }) => {
         ></h2>
         <Row className='mt-5'>
           {steps.map((step, index) => (
-            <Col key={index} className='mb-5' md={4}>
+            <Col key={index} className='mb-5' lg={4}>
               <StepCard
                 stepNum={index + 1}
                 text={step.title}

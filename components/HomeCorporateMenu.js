@@ -11,15 +11,25 @@ const HomeCorporateMenu = () => {
     >
       <Container>
         <Row>
-          <Col className='text-start' md={4}>
-            <Image
-              src='/assets/img/office-guys.png'
-              alt='corporate package'
-              width='300'
-              fluid
-            />
+          <Col
+            className='text-start align-self-center justify-content-center'
+            md={12}
+            lg={4}
+          >
+            <div className='text-center mb-4'>
+              <Image
+                src='/assets/img/office-guys.png'
+                alt='corporate package'
+                width='250'
+                fluid
+              />
+            </div>
           </Col>
-          <Col className='align-self-center' md={8}>
+          <Col
+            className='align-self-center text-center text-lg-left'
+            md={12}
+            lg={8}
+          >
             <h2 className='font-weight-bold mb-4'>
               Order Homemade Food For Your Office
             </h2>

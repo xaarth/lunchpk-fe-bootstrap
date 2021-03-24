@@ -67,7 +67,7 @@ const Contact = () => {
       >
         <Container>
           <Row>
-            <Col className='contact-details-section' md={6}>
+            <Col className='contact-details-section mb-4' md={4} lg={6}>
               <h1 className='title mb-4' style={{ fontWeight: '600' }}>
                 Contact Us
               </h1>
@@ -87,10 +87,14 @@ const Contact = () => {
                 </p>
               </div>
             </Col>
-            <Col md={6}>
+            <Col md={8} lg={6}>
               <Card>
-                <Card.Body style={{ padding: '40px 60px' }}>
+                <Card.Body
+                  className='contact-form-card'
+                  style={{ padding: '40px 60px' }}
+                >
                   <h4
+                    className='contact-form-title'
                     style={{
                       fontSize: '18px',
                       marginBottom: '24px',

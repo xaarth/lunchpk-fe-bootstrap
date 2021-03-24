@@ -6,9 +6,9 @@ const FrozenFoodsList = ({ title, deals }) => {
     <Container>
       <h1 className='h2 font-weight-bold text-center mb-5'>{title}</h1>
 
-      <Row>
+      <Row className='justify-content-center'>
         {deals.map((deal, index) => (
-          <Col key={index} md={3}>
+          <Col key={index} md={5} lg={3}>
             <DealItem
               title={deal.name}
               image={deal.image}

@@ -3,7 +3,7 @@ import { Image } from 'react-bootstrap';
 const StepCard = ({ imgSrc, text, desc, stepNum }) => {
   return (
     <div
-      className='bg-white mx-auto p-4 position-relative rounded'
+      className='step-card bg-white mx-auto p-4 position-relative rounded'
       style={{
         width: '90%',
         height: '100%',

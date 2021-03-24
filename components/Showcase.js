@@ -1,5 +1,6 @@
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import Link from 'next/link';
+import WhatsappBtn from '../components/WhatsappBtn';
 
 const Showcase = ({
   title,
@@ -16,6 +17,7 @@ const Showcase = ({
 }) => {
   return (
     <section
+      id='main-showcase'
       style={{
         background: bg,
         padding: spacing,
@@ -39,35 +41,40 @@ const Showcase = ({
 
       <Container>
         <Row>
-          <Col className='align-self-center' md={6}>
-            <h1
-              className='mb-4'
-              style={{
-                fontWeight: '800',
-                fontSize: '260%',
-              }}
-            >
-              {title}
-            </h1>
-            <p
-              className='mb-4'
-              style={{
-                fontSize: '18px',
-                lineHeight: '30px',
-              }}
-              dangerouslySetInnerHTML={{ __html: desc }}
-            ></p>
-            <Link href={btnLink}>
-              <a className={btnVariant}>{btnText}</a>
-            </Link>
+          <Col className='text-center text-md-left align-self-center' lg={6}>
+            <div className='showcase-content'>
+              <h1
+                className='title mb-4'
+                style={{
+                  fontWeight: '800',
+                  fontSize: '260%',
+                }}
+              >
+                {title}
+              </h1>
+              <p
+                className='subtitle mb-4'
+                style={{
+                  fontSize: '18px',
+                  lineHeight: '30px',
+                }}
+                dangerouslySetInnerHTML={{ __html: desc }}
+              ></p>
+              <Link href={btnLink}>
+                <a className={`${btnVariant} see-menu-btn`}>{btnText}</a>
+              </Link>
+              <WhatsappBtn />
+            </div>
           </Col>
-          <Col className='text-center' md={6}>
-            <Image
-              style={{ width: '80%' }}
-              src={imgSrc}
-              alt={imgAlt || title}
-              fluid
-            />
+          <Col className='text-center' lg={6}>
+            <div className='d-none d-lg-block showcase-img'>
+              <Image
+                style={{ width: '80%' }}
+                src={imgSrc}
+                alt={imgAlt || title}
+                fluid
+              />
+            </div>
           </Col>
         </Row>
       </Container>

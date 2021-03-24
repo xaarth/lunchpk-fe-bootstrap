@@ -10,9 +10,9 @@ const TestimonialList = ({ title, items }) => {
         </h2>
       ) : null}
 
-      <Row>
+      <Row className='justify-content-center'>
         {items.map((user, index) => (
-          <Col key={index} md={4}>
+          <Col key={index} className='align-self-center' md={6} lg={4}>
             <TestimonialCard name={user.name} comment={user.text} />
           </Col>
         ))}
