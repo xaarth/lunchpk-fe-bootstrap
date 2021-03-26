@@ -23,6 +23,10 @@ p {
   }
 }
 
+.order-form-testimonails {
+  margin-top: -40px;
+}
+
 .cta-btn {
   display: inline-block;
   padding: 0.4rem 1.7rem 0.4rem;
@@ -210,6 +214,10 @@ textarea.form-input {
   .contact-form-card {
     padding: 30px 40px !important;
   }
+
+  .order-form-testimonails {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 520px) {
@@ -219,6 +227,10 @@ textarea.form-input {
         font-size: 40px !important;
       }
     }
+  }
+
+  .order-form-testimonails {
+    margin-top: 0;
   }
 
   .step-card {

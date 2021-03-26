@@ -212,10 +212,7 @@ const PlaceAnOrder = () => {
             background: 'linear-gradient(45deg,#00a4bd,#00bda5)',
           }}
         >
-          <div
-            className='d-flex align-items-center h-100'
-            style={{ marginTop: '-40px' }}
-          >
+          <div className='d-flex align-items-center h-100 order-form-testimonails'>
             <Testimonials />
           </div>
         </Col>
