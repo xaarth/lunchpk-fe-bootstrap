@@ -50,6 +50,7 @@ export const getStaticProps = async () => {
     props: {
       frozenFoods,
     },
+    revalidate: 60,
   };
 };
 

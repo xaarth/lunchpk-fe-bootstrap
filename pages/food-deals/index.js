@@ -50,6 +50,7 @@ export const getStaticProps = async () => {
     props: {
       dailyDeals,
     },
+    revalidate: 60,
   };
 };
 
