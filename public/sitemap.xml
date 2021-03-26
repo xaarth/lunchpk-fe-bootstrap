@@ -487,12 +487,6 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>2</loc>
-        <lastmod>2021-01-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
         <loc>https://www.lunch.pk/lake-city-lahore</loc>
         <lastmod>2021-01-28</lastmod>
         <changefreq>daily</changefreq>
@@ -524,24 +518,6 @@
     </url>
     <url>
         <loc>https://www.lunch.pk/homemade/item/?item_id</loc>
-        <lastmod>2021-01-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>2378&mtid</loc>
-        <lastmod>2021-01-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>610&slug</loc>
-        <lastmod>2021-01-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>fatima-wasif</loc>
         <lastmod>2021-01-28</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
@@ -655,24 +631,6 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>2299&mtid</loc>
-        <lastmod>2021-01-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>628&slug</loc>
-        <lastmod>2021-01-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>dua-kitchen</loc>
-        <lastmod>2021-01-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
         <loc>https://www.lunch.pk/chickenbiryani-bahria-town-lahore</loc>
         <lastmod>2021-01-28</lastmod>
         <changefreq>daily</changefreq>
@@ -716,24 +674,6 @@
     </url>
     <url>
         <loc>https://www.lunch.pk/homemade/item/?item_id</loc>
-        <lastmod>2021-01-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>2324&mtid</loc>
-        <lastmod>2021-01-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>814&slug</loc>
-        <lastmod>2021-01-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>ummishal-s-kitchen</loc>
         <lastmod>2021-01-28</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
