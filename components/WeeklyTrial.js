@@ -24,7 +24,7 @@ const WeeklyTrial = ({ menuId }) => {
               </p>
             </Col>
             <Col className='align-self-center my-3'>
-              <Link href={`/place-an-order/${menuId}/weeklyTrial`}>
+              <Link href={`/place-an-order/${menuId}/WeeklyTrial`}>
                 <a className='cta-btn cta-btn-primary'>Order Weekly Trial</a>
               </Link>
             </Col>

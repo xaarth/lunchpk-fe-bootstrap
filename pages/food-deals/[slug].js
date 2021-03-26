@@ -61,7 +61,7 @@ const FoodDealDetail = ({ deal }) => {
                   Its not just TASTY. Its HEALTHY too!
                 </p>
                 <p style={{ fontSize: '1rem' }}>{deal.deliveryTime}</p>
-                <Link href={`/place-an-order/${deal._id}/dailyDeal`}>
+                <Link href={`/place-an-order/${deal._id}/DailyDeal`}>
                   <a className='cta-btn cta-btn-primary'>Order Now</a>
                 </Link>
               </div>

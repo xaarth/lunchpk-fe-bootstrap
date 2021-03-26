@@ -85,7 +85,7 @@ const MonthlyMenuDetail = ({ menu }) => {
               name={menu.name}
               desc={menu.description}
               price={`${menu.priceCurrency} ${menu.price}`}
-              orderLink={`/place-an-order/${menu._id}/monthlyMenu`}
+              orderLink={`/place-an-order/${menu._id}/MonthlyMenu`}
               week1Menu={menu.week1Menu}
               week2Menu={menu.week2Menu}
               week3Menu={menu.week3Menu}
@@ -115,7 +115,7 @@ const MonthlyMenuDetail = ({ menu }) => {
             kitchen, we have number of <br /> family kitchens near you to meet
             your needs.
           </p>
-          <Link href={`/place-an-order/${menu._id}/monthlyMenu`}>
+          <Link href={`/place-an-order/${menu._id}/MonthlyMenu`}>
             <a className='cta-btn cta-lg cta-btn-primary'>Order Now</a>
           </Link>
         </Container>

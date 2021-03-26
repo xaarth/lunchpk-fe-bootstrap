@@ -28,7 +28,7 @@ const MonthlyMenus = ({ menus }) => {
               name={menu.name}
               desc={menu.description}
               price={`${menu.priceCurrency} ${menu.price}`}
-              orderLink={`/place-an-order/${menu._id}/monthlyMenu`}
+              orderLink={`/place-an-order/${menu._id}/MonthlyMenu`}
               week1Menu={menu.week1Menu}
               week2Menu={menu.week2Menu}
               week3Menu={menu.week3Menu}

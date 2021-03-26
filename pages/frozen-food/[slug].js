@@ -42,7 +42,7 @@ const FrozenFoodDetail = ({ deal }) => {
                 <p className='mb-4' style={{ fontSize: '1rem' }}>
                   {deal.deliveryTime}
                 </p>
-                <Link href={`/place-an-order/${deal._id}/frozenFood`}>
+                <Link href={`/place-an-order/${deal._id}/FrozenFood`}>
                   <a className='cta-btn cta-btn-primary'>Order Now</a>
                 </Link>
               </div>
