@@ -2,7 +2,7 @@ import TosPoint from '../components/TosPoint';
 import Link from 'next/link';
 import HeadMeta from '../components/HeadMeta';
 import { useRouter } from 'next/router';
-import { Container } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
 
 const TermsOfService = () => {
   const router = useRouter();

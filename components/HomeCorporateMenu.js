@@ -1,5 +1,8 @@
 import Link from 'next/link';
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
 
 const HomeCorporateMenu = () => {
   return (

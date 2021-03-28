@@ -1,6 +1,7 @@
 import { Formik, Form } from 'formik';
 import { TextInput } from '../../components/Inputs';
-import { Row, Col } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import YoutubeVideosList from '../../components/YoutubeVideosList';
 import Message from '../../components/Message';
 import * as Yup from 'yup';

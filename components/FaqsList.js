@@ -1,5 +1,5 @@
 import FaqItem from './FaqItem';
-import { Container } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
 
 const FaqsList = ({ title, items }) => {
   return (

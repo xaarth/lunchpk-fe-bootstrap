@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { Container } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
 import StepsList from '../../components/StepsList';
 import MonthlyMenu from '../../components/MonthlyMenu';
 import FaqsList from '../../components/FaqsList';

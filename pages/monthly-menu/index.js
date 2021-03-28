@@ -1,4 +1,4 @@
-import { Container } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
 import MonthlyMenu from '../../components/MonthlyMenu';
 import axios from 'axios';
 import HeadMeta from '../../components/HeadMeta';

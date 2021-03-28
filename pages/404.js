@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { Container, Image } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
 import HeadMeta from '../components/HeadMeta';
 
 const NotFound = () => {

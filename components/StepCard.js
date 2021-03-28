@@ -1,4 +1,4 @@
-import { Image } from 'react-bootstrap';
+import Image from 'react-bootstrap/Image';
 
 const StepCard = ({ imgSrc, text, desc, stepNum }) => {
   return (

@@ -1,9 +1,11 @@
-import { Container, Row, Col } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
 import { useRouter } from 'next/router';
 import axios from 'axios';
 import Link from 'next/link';
 import Testimonials from '../../components/Testimonials';
-import { Image } from 'react-bootstrap';
 import HeadMeta from '../../components/HeadMeta';
 
 const FrozenFoodDetail = ({ deal }) => {

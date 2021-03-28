@@ -4,7 +4,8 @@ import {
   TextareaInput,
   SelectInput,
 } from '../../../components/Inputs';
-import { Row, Col } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Message from '../../../components/Message';
 import * as Yup from 'yup';
 import { useState } from 'react';

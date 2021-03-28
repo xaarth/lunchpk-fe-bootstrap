@@ -1,4 +1,5 @@
-import { Col, Container } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
 import axios from 'axios';
 import HeadMeta from '../../components/HeadMeta';
 import { useRouter } from 'next/router';

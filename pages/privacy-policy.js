@@ -1,4 +1,4 @@
-import { Container } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
 import TosPoint from '../components/TosPoint';
 import HeadMeta from '../components/HeadMeta';
 import { useRouter } from 'next/router';
