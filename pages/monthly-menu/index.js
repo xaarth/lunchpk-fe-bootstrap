@@ -11,8 +11,8 @@ const MonthlyMenus = ({ menus }) => {
     <>
       <HeadMeta
         name='Monthly Menus'
-        title={`Homemade Food - Lunch Dinner - order food online - Islamabad LHR KHI`}
-        desc={`Lunch.pk is Pakistan #1 website to order homemade food by families near you. Order food online in Islamabad Lahore Karachi.`}
+        title={`Homemade Food - Lunch Dinner - order food online Islamabad, Lahore, Karachi`}
+        desc={`Economy Menu. You will get 4 chapati, 2 dish ( 2 persons serving ) , salad, raita delivered at your doorstep. PKR 8500`}
         currentUrl={router.pathname}
       />
       <section
