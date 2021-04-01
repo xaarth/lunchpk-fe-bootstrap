@@ -32,8 +32,8 @@ export default function Home() {
     <>
       <HeadMeta
         name='Home'
-        title='Order Homemade Food Online - Lunch Dinner - Islamabad more'
-        desc='Lunch.pk is Pakistan #1 website to order homemade food, lunch and dinner online. Available in Lahore Karachi Islamabad and more.'
+        title='Order Homemade Food Online - Lunch Dinner - Islamabad'
+        desc='Lunch.pk is Pakistan #1 website to order homemade food, lunch and dinner online. Available in Lahore, Karachi, Islamabad, Rawalpindi and more.'
         currentUrl={router.pathname}
       />
 
