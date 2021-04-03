@@ -86,7 +86,7 @@ const Showcase = ({
 };
 
 Showcase.defaultProps = {
-  bg: '#f6f4f0',
+  bg: 'linear-gradient(to top right,#fef8f0,#fff3ee,#fff1ee)',
   textColor: '#212529',
   spacing: '4rem 0 4rem',
   btnLink: '#',
