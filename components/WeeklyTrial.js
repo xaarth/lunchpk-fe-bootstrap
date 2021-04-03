@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Link from 'next/link';
 
-const WeeklyTrial = ({ menuId }) => {
+const WeeklyTrial = ({ menuId, days, price }) => {
   return (
     <section style={{ padding: '0 0 5rem' }}>
       <Container>
@@ -19,10 +19,10 @@ const WeeklyTrial = ({ menuId }) => {
           <Row>
             <Col className='my-3' lg={9}>
               <h3 className='font-weight-bold'>
-                Not Sure Yet? Try our food for 6 days in PKR 1750
+                Not Sure Yet? Try our food for {days} days in PKR {price}
               </h3>
               <p className='mb-0'>
-                You will get food for 1 person 1 Time Meal for 6 days.
+                You will get food for 1 person 1 Time Meal for {days} days.
               </p>
             </Col>
             <Col className='align-self-center my-3'>
@@ -35,6 +35,10 @@ const WeeklyTrial = ({ menuId }) => {
       </Container>
     </section>
   );
+};
+
+WeeklyTrial.defaultProps = {
+  days: 6,
 };
 
 export default WeeklyTrial;

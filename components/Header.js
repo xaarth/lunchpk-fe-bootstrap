@@ -46,6 +46,10 @@ const Header = () => {
               </Link>
             </NavDropdown>
 
+            <Link href='/ramzan-special/'>
+              <a className='nav-link text-primary'>Ramadan Menu</a>
+            </Link>
+
             <Link href='/food-deals/'>
               <a className='nav-link'>Daily Menu</a>
             </Link>

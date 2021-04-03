@@ -8,8 +8,6 @@ import WeeklyTrial from '../../components/WeeklyTrial';
 import HeadMeta from '../../components/HeadMeta';
 
 const MonthlyMenuDetail = ({ menu }) => {
-  const router = useRouter();
-
   const steps = [
     {
       title: `Click on Order Now`,
@@ -58,6 +56,18 @@ const MonthlyMenuDetail = ({ menu }) => {
       <br>`,
     },
   ];
+
+  const router = useRouter();
+
+  const { slug } = router.query;
+
+  let weeklyPrice = 1750;
+
+  if (slug === 'seher-menu') {
+    weeklyPrice = 2250;
+  } else if (slug === 'iftar-and-dinner') {
+    weeklyPrice = 3000;
+  }
 
   if (router.isFallback) {
     return <div>Loading...</div>;
@@ -128,7 +138,7 @@ const MonthlyMenuDetail = ({ menu }) => {
 
       <FaqsList title='Frequently Asked Questions' items={faqs} />
 
-      <WeeklyTrial menuId={menu._id} />
+      <WeeklyTrial menuId={menu._id} price={weeklyPrice} />
     </>
   );
 };
