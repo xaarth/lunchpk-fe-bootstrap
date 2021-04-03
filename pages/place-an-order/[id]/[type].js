@@ -81,7 +81,7 @@ const PlaceAnOrder = () => {
                 'Other',
               ]),
               noOfPersons: Yup.number().positive().required(),
-              time: Yup.mixed().oneOf(['Lunch', 'Dinner']),
+              time: Yup.mixed().oneOf(['Lunch', 'Dinner', 'Other']),
               profession: Yup.string(),
               address: Yup.string().required(),
               message: Yup.string(),
@@ -185,6 +185,7 @@ const PlaceAnOrder = () => {
                     <option value=''>Select...</option>
                     <option value='Lunch'>Lunch</option>
                     <option value='Dinner'>Dinner</option>
+                    <option value='Other'>Other</option>
                   </SelectInput>
                   <TextareaInput label='Message?' name='message' />
                   <button
