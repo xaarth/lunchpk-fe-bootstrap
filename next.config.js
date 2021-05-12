@@ -706,6 +706,21 @@ module.exports = {
         destination: '/?loc=Allama Iqbal Town',
         permanent: true,
       },
+      {
+        source: '/buffer-zone-karachi',
+        destination: '/?loc=Buffer Zone Karachi',
+        permanent: true,
+      },
+      {
+        source: '/home-4',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/customer',
+        destination: 'https://www.crm.lunch.pk/customer/',
+        permanent: true,
+      },
     ];
   },
   poweredByHeader: false,
