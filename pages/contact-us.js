@@ -1,7 +1,6 @@
 import axios from 'axios';
 import * as Yup from 'yup';
 import { useState } from 'react';
-import dynamic from 'next/dynamic';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Formik, Form } from 'formik';
@@ -9,15 +8,10 @@ import { useRouter } from 'next/router';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 
-const FaqsList = dynamic(() => import('../components/FaqsList'));
-const Message = dynamic(() => import('../components/Message'));
-const HeadMeta = dynamic(() => import('../components/HeadMeta'));
-const TextInput = dynamic(() =>
-  import('../components/Inputs').then((mod) => mod.TextInput)
-);
-const TextareaInput = dynamic(() =>
-  import('../components/Inputs').then((mod) => mod.TextareaInput)
-);
+import Message from '../components/Message';
+import HeadMeta from '../components/HeadMeta';
+import FaqsList from '../components/FaqsList';
+import { TextInput, TextareaInput } from '../components/Inputs';
 
 const faqs = [
   {

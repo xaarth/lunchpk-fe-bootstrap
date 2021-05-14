@@ -1,10 +1,9 @@
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import Container from 'react-bootstrap/Container';
 
-const HeadMeta = dynamic(() => import('../components/HeadMeta'));
-const TosPoint = dynamic(() => import('../components/TosPoint'));
+import TosPoint from '../components/TosPoint';
+import HeadMeta from '../components/HeadMeta';
 
 const TermsOfService = () => {
   const router = useRouter();

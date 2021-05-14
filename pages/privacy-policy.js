@@ -1,9 +1,8 @@
 import { useRouter } from 'next/router';
-import dynamic from 'next/dynamic';
 import Container from 'react-bootstrap/Container';
 
-const TosPoint = dynamic(() => import('../components/TosPoint'));
-const HeadMeta = dynamic(() => import('../components/HeadMeta'));
+import TosPoint from '../components/TosPoint';
+import HeadMeta from '../components/HeadMeta';
 
 const PrivacyPolicy = () => {
   const router = useRouter();

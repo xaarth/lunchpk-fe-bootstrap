@@ -9,8 +9,8 @@ const FrozenFoodsList = ({ title, deals }) => (
     <h1 className='h2 font-weight-bold text-center mb-5'>{title}</h1>
 
     <Row className='justify-content-center'>
-      {deals.map((deal, index) => (
-        <Col key={index} md={5} lg={3}>
+      {deals.map((deal) => (
+        <Col key={deal.slug} md={5} lg={3}>
           <DealItem
             title={deal.name}
             image={deal.image}

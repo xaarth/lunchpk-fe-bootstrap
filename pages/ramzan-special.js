@@ -1,10 +1,9 @@
 import axios from 'axios';
-import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import Container from 'react-bootstrap/Container';
 
-const HeadMeta = dynamic(() => import('../components/HeadMeta'));
-const MonthlyMenu = dynamic(() => import('../components/MonthlyMenu'));
+import HeadMeta from '../components/HeadMeta';
+import MonthlyMenu from '../components/MonthlyMenu';
 
 const RamzanSpecial = ({ iftarMenu, seherMenu }) => {
   const router = useRouter();

@@ -1,10 +1,9 @@
 import axios from 'axios';
-import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 
-const HeadMeta = dynamic(() => import('../../components/HeadMeta'));
+import HeadMeta from '../../components/HeadMeta';
 
 const ThankYou = ({ order }) => {
   const router = useRouter();

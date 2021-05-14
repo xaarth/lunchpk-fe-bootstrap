@@ -2,9 +2,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 
-const StepCard = dynamic(() => import('./StepCard'));
+import StepCard from './StepCard';
 
 const StepsList = ({ title, ctaText, ctaBtn, ctaBtnLink, steps }) => (
   <section

@@ -1,6 +1,4 @@
-import dynamic from 'next/dynamic';
-
-const TestimonialList = dynamic(() => import('./TestimonialList'));
+import TestimonialList from './TestimonialList';
 
 const testimonails = [
   {

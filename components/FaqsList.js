@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
 import Container from 'react-bootstrap/Container';
 
-const FaqItem = dynamic(() => import('./FaqItem'));
+import FaqItem from './FaqItem';
 
 const FaqsList = ({ title, items }) => (
   <section
@@ -13,8 +12,12 @@ const FaqsList = ({ title, items }) => (
     <Container>
       <h2 className='font-weight-bold mb-5'>{title}</h2>
       <div className='faq-items'>
-        {items.map((item, index) => (
-          <FaqItem key={index} question={item.question} answer={item.answer} />
+        {items.map((item) => (
+          <FaqItem
+            key={item.question}
+            question={item.question}
+            answer={item.answer}
+          />
         ))}
       </div>
     </Container>

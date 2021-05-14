@@ -1,9 +1,8 @@
-import dynamic from 'next/dynamic';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 
-const TestimonialCard = dynamic(() => import('./TestimonialCard'));
+import TestimonialCard from './TestimonialCard';
 
 const TestimonialList = ({ title, items }) => (
   <Container>

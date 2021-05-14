@@ -4,10 +4,10 @@ import { useRouter } from 'next/router';
 import Container from 'react-bootstrap/Container';
 
 const StepsList = dynamic(() => import('../../components/StepsList'));
-const MonthlyMenu = dynamic(() => import('../../components/MonthlyMenu'));
+import MonthlyMenu from '../../components/MonthlyMenu';
 const FaqsList = dynamic(() => import('../../components/FaqsList'));
 const WeeklyTrial = dynamic(() => import('../../components/WeeklyTrial'));
-const HeadMeta = dynamic(() => import('../../components/HeadMeta'));
+import HeadMeta from '../../components/HeadMeta';
 
 const steps = [
   {

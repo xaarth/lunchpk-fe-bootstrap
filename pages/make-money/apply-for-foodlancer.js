@@ -1,20 +1,15 @@
 import axios from 'axios';
 import * as Yup from 'yup';
-import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { Formik, Form } from 'formik';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useRouter } from 'next/router';
 
-const HeadMeta = dynamic(() => import('../../components/HeadMeta'));
-const Message = dynamic(() => import('../../components/Message'));
-const YoutubeVideosList = dynamic(() =>
-  import('../../components/YoutubeVideosList')
-);
-const TextInput = dynamic(() =>
-  import('../../components/Inputs').then((mod) => mod.TextInput)
-);
+import HeadMeta from '../../components/HeadMeta';
+import Message from '../../components/Message';
+import YoutubeVideosList from '../../components/YoutubeVideosList';
+import { TextInput } from '../../components/Inputs';
 
 const videos = [
   {

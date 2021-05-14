@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 
-const HeadMeta = dynamic(() => import('../../components/HeadMeta'));
+import HeadMeta from '../../components/HeadMeta';
 const DailyDealsList = dynamic(() => import('../../components/DailyDealsList'));
 const Testimonials = dynamic(() => import('../../components/Testimonials'));
 const DealsSocialProof = dynamic(() =>

@@ -1,13 +1,10 @@
-import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 
-const Showcase = dynamic(() => import('../../components/Showcase'));
-const StepsList = dynamic(() => import('../../components/StepsList'));
-const YoutubeVideosList = dynamic(() =>
-  import('../../components/YoutubeVideosList')
-);
-const FaqsList = dynamic(() => import('../../components/FaqsList'));
-const HeadMeta = dynamic(() => import('../../components/HeadMeta'));
+import HeadMeta from '../../components/HeadMeta';
+import FaqsList from '../../components/FaqsList';
+import Showcase from '../../components/Showcase';
+import StepsList from '../../components/StepsList';
+import YoutubeVideosList from '../../components/YoutubeVideosList';
 
 const steps = [
   {

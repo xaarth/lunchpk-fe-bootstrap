@@ -1,15 +1,14 @@
 import axios from 'axios';
 import Link from 'next/link';
 import { useState } from 'react';
-import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'next/image';
 
-const HeadMeta = dynamic(() => import('../../components/HeadMeta'));
-const Testimonials = dynamic(() => import('../../components/Testimonials'));
+import HeadMeta from '../../components/HeadMeta';
+import Testimonials from '../../components/Testimonials';
 
 const FoodDealDetail = ({ deal }) => {
   const router = useRouter();

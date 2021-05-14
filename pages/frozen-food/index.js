@@ -8,7 +8,7 @@ const Testimonials = dynamic(() => import('../../components/Testimonials'));
 const DealsSocialProof = dynamic(() =>
   import('../../components/DealsSocialProof')
 );
-const HeadMeta = dynamic(() => import('../../components/HeadMeta'));
+import HeadMeta from '../../components/HeadMeta';
 
 const FrozenFood = ({ frozenFoods }) => {
   const router = useRouter();

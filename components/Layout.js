@@ -1,7 +1,5 @@
-import dynamic from 'next/dynamic';
-
-const Header = dynamic(() => import('./Header'));
-const Footer = dynamic(() => import('./Footer'));
+import Header from './Header';
+import Footer from './Footer';
 
 const Layout = ({ children }) => (
   <>

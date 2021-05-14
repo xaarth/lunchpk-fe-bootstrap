@@ -1,17 +1,14 @@
 import { useRouter } from 'next/router';
-import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 
-const Showcase = dynamic(() => import('../components/Showcase'));
-const StepsList = dynamic(() => import('../components/StepsList'));
-const HomeInfo = dynamic(() => import('../components/HomeInfo'));
-const HomeCorporateMenu = dynamic(() =>
-  import('../components/HomeCorporateMenu')
-);
-const HomeMenus = dynamic(() => import('../components/HomeMenus'));
-const HomeFoodlancer = dynamic(() => import('../components/HomeFoodlancer'));
-const Testimonials = dynamic(() => import('../components/Testimonials'));
-const HeadMeta = dynamic(() => import('../components/HeadMeta'));
+import Showcase from '../components/Showcase';
+import StepsList from '../components/StepsList';
+import HomeInfo from '../components/HomeInfo';
+import HomeCorporateMenu from '../components/HomeCorporateMenu';
+import HomeMenus from '../components/HomeMenus';
+import HomeFoodlancer from '../components/HomeFoodlancer';
+import Testimonials from '../components/Testimonials';
+import HeadMeta from '../components/HeadMeta';
 
 const steps = [
   { title: `Choose a Menu`, img: '/assets/img/menu-icon.svg' },
@@ -35,8 +32,8 @@ export default function Home() {
     <>
       <HeadMeta
         name='Home'
-        title='Order Homemade Food Online - Lunch Dinner - Islamabad'
-        desc='Lunch.pk is Pakistan #1 website to order homemade food, lunch and dinner online. Available in Lahore, Karachi, Islamabad, Rawalpindi and more.'
+        title='Order Homemade Food Online - Lunch Dinner Delivery Service in Islamabad, Lahore, Karachi'
+        desc='Lunch.pk is Pakistan #1 website to order homemade food, lunch and dinner online. Delivery in Lahore, Karachi, Islamabad, Rawalpindi and more.'
         currentUrl={router.pathname}
       />
 

@@ -1,24 +1,19 @@
 import axios from 'axios';
 import * as Yup from 'yup';
-import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { Formik, Form } from 'formik';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useRouter } from 'next/router';
 
-const HeadMeta = dynamic(() => import('../../../components/HeadMeta'));
-const Testimonials = dynamic(() => import('../../../components/Testimonials'));
-const Message = dynamic(() => import('../../../components/Message'));
-const TextInput = dynamic(() =>
-  import('../../../components/Inputs').then((mod) => mod.TextInput)
-);
-const TextareaInput = dynamic(() =>
-  import('../../../components/Inputs').then((mod) => mod.TextareaInput)
-);
-const SelectInput = dynamic(() =>
-  import('../../../components/Inputs').then((mod) => mod.SelectInput)
-);
+import HeadMeta from '../../../components/HeadMeta';
+import Testimonials from '../../../components/Testimonials';
+import Message from '../../../components/Message';
+import {
+  TextInput,
+  TextareaInput,
+  SelectInput,
+} from '../../../components/Inputs';
 
 const PlaceAnOrder = () => {
   const [activeStep, setActiveStep] = useState(1);
