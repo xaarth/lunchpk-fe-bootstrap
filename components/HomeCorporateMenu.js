@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
+import Image from 'next/image';
 
 const HomeCorporateMenu = () => {
   return (
@@ -23,8 +23,8 @@ const HomeCorporateMenu = () => {
               <Image
                 src='/assets/img/office-guys.webp'
                 alt='corporate package'
-                width='250'
-                fluid
+                width={250}
+                height={250}
               />
             </div>
           </Col>

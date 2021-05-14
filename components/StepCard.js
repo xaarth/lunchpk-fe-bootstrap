@@ -1,4 +1,4 @@
-import Image from 'react-bootstrap/Image';
+import Image from 'next/image';
 
 const StepCard = ({ imgSrc, text, desc, stepNum }) => {
   return (
@@ -16,7 +16,7 @@ const StepCard = ({ imgSrc, text, desc, stepNum }) => {
       >
         {stepNum}
       </h2>
-      <Image className='mb-3' src={imgSrc} width={70} height={70} alt={text} />
+      <Image className='mb-3' src={imgSrc} width={70} height={105} alt={text} />
       <h5
         dangerouslySetInnerHTML={{ __html: text }}
         className='mb-0'

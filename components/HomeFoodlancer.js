@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const HomeFoodlancer = () => {
@@ -27,9 +27,10 @@ const HomeFoodlancer = () => {
           <Col lg={4}>
             <div className='text-center'>
               <Image
-                className='d-none d-lg-inline-block'
+                className='home-make-money-image'
                 src='/assets/img/make-money.webp'
-                fluid
+                width={400}
+                height={400}
                 alt='make money with lunch.pk'
               />
             </div>

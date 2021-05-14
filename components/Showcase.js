@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
+import Image from 'next/image';
 import Link from 'next/link';
 import WhatsappBtn from '../components/WhatsappBtn';
 
@@ -75,7 +75,8 @@ const Showcase = ({
                 style={{ width: '80%' }}
                 src={imgSrc}
                 alt={imgAlt || title}
-                fluid
+                width={400}
+                height={400}
               />
             </div>
           </Col>

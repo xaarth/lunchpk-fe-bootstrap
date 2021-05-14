@@ -269,3 +269,9 @@ textarea.form-input {
     margin-top: 0; // remove the gap so it doesn't close
   }
 }
+
+@media (max-width: 768px) {
+  .home-make-money-image {
+    display: none !important;
+  }
+}
