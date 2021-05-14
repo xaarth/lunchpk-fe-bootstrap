@@ -1,8 +1,8 @@
 import Head from 'next/head';
 
 const HeadMeta = ({ name, title, desc, currentUrl }) => {
-  const domain_url = 'https://www.lunch.pk';
-  const header_logo = '/assets/img/logo.png';
+  const domainUrl = 'https://www.lunch.pk';
+  const headerLogo = '/assets/img/logo.png';
 
   return (
     <Head>
@@ -21,16 +21,16 @@ const HeadMeta = ({ name, title, desc, currentUrl }) => {
 
       <meta property='og:title' content={title} />
       <meta property='og:description' content={desc} />
-      <meta property='og:url' content={domain_url} />
+      <meta property='og:url' content={domainUrl} />
       <meta property='og:site_name' content={title} />
-      <meta property='og:image' content={header_logo} />
-      <meta property='og:image:secure_url' content={header_logo} />
+      <meta property='og:image' content={headerLogo} />
+      <meta property='og:image:secure_url' content={headerLogo} />
       <meta name='twitter:card' content={name} />
       <meta name='twitter:site' content={name} />
-      <meta name='twitter:domain' content={domain_url} />
+      <meta name='twitter:domain' content={domainUrl} />
       <meta name='twitter:title' content={title} />
       <meta name='twitter:description' content={desc} />
-      <meta name='twitter:image' content={header_logo} />
+      <meta name='twitter:image' content={headerLogo} />
 
       <link rel='canonical' href={currentUrl} />
 

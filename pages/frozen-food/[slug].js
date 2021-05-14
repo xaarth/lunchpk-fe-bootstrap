@@ -1,12 +1,14 @@
-import Container from 'react-bootstrap/Container';
+import axios from 'axios';
+import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
 import { useRouter } from 'next/router';
-import axios from 'axios';
-import Link from 'next/link';
-import Testimonials from '../../components/Testimonials';
-import HeadMeta from '../../components/HeadMeta';
+import Image from 'next/image';
+import Container from 'react-bootstrap/Container';
+
+const Testimonials = dynamic(() => import('../../components/Testimonials'));
+const HeadMeta = dynamic(() => import('../../components/HeadMeta'));
 
 const FrozenFoodDetail = ({ deal }) => {
   const router = useRouter();
@@ -28,7 +30,12 @@ const FrozenFoodDetail = ({ deal }) => {
           <Row>
             <Col lg={6}>
               <div className='position-sticky' style={{ top: '100px' }}>
-                <Image className='rounded pr-4' src={deal.image} fluid />
+                <Image
+                  className='rounded pr-4'
+                  src={deal.image}
+                  width={700}
+                  height={400}
+                />
               </div>
             </Col>
             <Col className='align-self-center' lg={6}>

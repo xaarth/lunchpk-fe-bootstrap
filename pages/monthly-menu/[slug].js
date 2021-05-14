@@ -1,28 +1,30 @@
+import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import Container from 'react-bootstrap/Container';
-import StepsList from '../../components/StepsList';
-import MonthlyMenu from '../../components/MonthlyMenu';
-import FaqsList from '../../components/FaqsList';
-import Link from 'next/link';
-import WeeklyTrial from '../../components/WeeklyTrial';
-import HeadMeta from '../../components/HeadMeta';
+
+const StepsList = dynamic(() => import('../../components/StepsList'));
+const MonthlyMenu = dynamic(() => import('../../components/MonthlyMenu'));
+const FaqsList = dynamic(() => import('../../components/FaqsList'));
+const WeeklyTrial = dynamic(() => import('../../components/WeeklyTrial'));
+const HeadMeta = dynamic(() => import('../../components/HeadMeta'));
+
+const steps = [
+  {
+    title: `Click on Order Now`,
+    img: `/assets/img/order-now-click.svg`,
+  },
+  {
+    title: `Pay via Bank Transfer`,
+    img: `/assets/img/bank-transfer-icon.svg`,
+  },
+  {
+    title: `Enjoy the Food`,
+    img: `/assets/img/food-test.svg`,
+  },
+];
 
 const MonthlyMenuDetail = ({ menu }) => {
-  const steps = [
-    {
-      title: `Click on Order Now`,
-      img: `/assets/img/order-now-click.svg`,
-    },
-    {
-      title: `Pay via Bank Transfer`,
-      img: `/assets/img/bank-transfer-icon.svg`,
-    },
-    {
-      title: `Enjoy the Food`,
-      img: `/assets/img/food-test.svg`,
-    },
-  ];
-
   const faqs = [
     {
       question: 'Who will deliver me food?',

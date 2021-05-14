@@ -1,18 +1,24 @@
+import axios from 'axios';
+import * as Yup from 'yup';
+import dynamic from 'next/dynamic';
+import { useState } from 'react';
 import { Formik, Form } from 'formik';
-import {
-  TextInput,
-  TextareaInput,
-  SelectInput,
-} from '../../../components/Inputs';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Message from '../../../components/Message';
-import * as Yup from 'yup';
-import { useState } from 'react';
-import axios from 'axios';
-import Testimonials from '../../../components/Testimonials';
 import { useRouter } from 'next/router';
-import HeadMeta from '../../../components/HeadMeta';
+
+const HeadMeta = dynamic(() => import('../../../components/HeadMeta'));
+const Testimonials = dynamic(() => import('../../../components/Testimonials'));
+const Message = dynamic(() => import('../../../components/Message'));
+const TextInput = dynamic(() =>
+  import('../../../components/Inputs').then((mod) => mod.TextInput)
+);
+const TextareaInput = dynamic(() =>
+  import('../../../components/Inputs').then((mod) => mod.TextareaInput)
+);
+const SelectInput = dynamic(() =>
+  import('../../../components/Inputs').then((mod) => mod.SelectInput)
+);
 
 const PlaceAnOrder = () => {
   const [activeStep, setActiveStep] = useState(1);
@@ -42,7 +48,7 @@ const PlaceAnOrder = () => {
     <>
       <HeadMeta
         name='Place an order'
-        title={`Place an order | Lunch.pk`}
+        title='Place an order | Lunch.pk'
         desc={`Lunch.pk is Pakistan's best website to Order homemade food online. Available in Lahore, Islamabad, Karachi and More`}
         currentUrl={router.pathname}
       />
@@ -105,8 +111,6 @@ const PlaceAnOrder = () => {
                   if (res.status === 201) {
                     resetForm();
                     setSubmitting(false);
-
-                    console.log(res);
 
                     router.push(`/thank-you/${res.data._id}`);
                   } else {

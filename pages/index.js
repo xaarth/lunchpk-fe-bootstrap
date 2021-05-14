@@ -1,21 +1,25 @@
-import Showcase from '../components/Showcase';
-import StepsList from '../components/StepsList';
-import HomeInfo from '../components/HomeInfo';
-import HomeCorporateMenu from '../components/HomeCorporateMenu';
-import HomeMenus from '../components/HomeMenus';
-import HomeFoodlancer from '../components/HomeFoodlancer';
-import Testimonials from '../components/Testimonials';
-import HeadMeta from '../components/HeadMeta';
 import { useRouter } from 'next/router';
+import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 
-export default function Home() {
-  const steps = [
-    { title: `Choose a Menu`, img: '/assets/img/menu-icon.svg' },
-    { title: `Place your Order`, img: '/assets/img/clipboard.svg' },
-    { title: `Enjoy your Food`, img: '/assets/img/yummy-icon.svg' },
-  ];
+const Showcase = dynamic(() => import('../components/Showcase'));
+const StepsList = dynamic(() => import('../components/StepsList'));
+const HomeInfo = dynamic(() => import('../components/HomeInfo'));
+const HomeCorporateMenu = dynamic(() =>
+  import('../components/HomeCorporateMenu')
+);
+const HomeMenus = dynamic(() => import('../components/HomeMenus'));
+const HomeFoodlancer = dynamic(() => import('../components/HomeFoodlancer'));
+const Testimonials = dynamic(() => import('../components/Testimonials'));
+const HeadMeta = dynamic(() => import('../components/HeadMeta'));
 
+const steps = [
+  { title: `Choose a Menu`, img: '/assets/img/menu-icon.svg' },
+  { title: `Place your Order`, img: '/assets/img/clipboard.svg' },
+  { title: `Enjoy your Food`, img: '/assets/img/yummy-icon.svg' },
+];
+
+export default function Home() {
   const [location, setLocation] = useState('Near You');
 
   const router = useRouter();
@@ -23,8 +27,7 @@ export default function Home() {
 
   useEffect(() => {
     if (query.loc) {
-      let location = query.loc;
-      setLocation(`in ${location}`);
+      setLocation(`in ${query.loc}`);
     }
   }, [query]);
 

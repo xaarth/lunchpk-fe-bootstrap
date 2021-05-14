@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'react-bootstrap/Image';
+import Image from 'next/image';
 
 const DealItem = ({ image, title, detailLink, children }) => {
   return (
@@ -15,10 +15,11 @@ const DealItem = ({ image, title, detailLink, children }) => {
           }}
         >
           <Image
-            className='w-100 h-100'
             style={{ objectFit: 'cover' }}
             src={image}
             alt={title}
+            width={400}
+            height={310}
           />
         </div>
         <div className='info'>{children}</div>

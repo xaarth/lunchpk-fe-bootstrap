@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Image from 'next/image';
 
 const Header = () => {
   return (
@@ -10,7 +11,12 @@ const Header = () => {
       <Container>
         <Link href='/'>
           <Navbar.Brand style={{ cursor: 'pointer' }}>
-            <img src='/assets/img/logo.png' height='48' alt='lunchpk logo' />
+            <Image
+              src='/assets/img/logo.png'
+              width={125}
+              height={48}
+              alt='lunchpk logo'
+            />
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />

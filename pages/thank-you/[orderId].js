@@ -1,8 +1,10 @@
+import axios from 'axios';
+import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import axios from 'axios';
-import HeadMeta from '../../components/HeadMeta';
-import { useRouter } from 'next/router';
+
+const HeadMeta = dynamic(() => import('../../components/HeadMeta'));
 
 const ThankYou = ({ order }) => {
   const router = useRouter();
@@ -11,7 +13,7 @@ const ThankYou = ({ order }) => {
     <>
       <HeadMeta
         name='Thank you for your order'
-        title={`Thank you for your | Lunch.pk`}
+        title='Thank you for your | Lunch.pk'
         desc={`Lunch.pk is Pakistan's best website to Order homemade food online. Available in Lhr, Isb, Khi, Rwp and More`}
         currentUrl={router.pathname}
       />
@@ -59,15 +61,12 @@ export const getServerSideProps = async ({ params }) => {
       `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/orders/${params.orderId}`
     );
 
-    console.log(data);
-
     return {
       props: {
         order: data,
       },
     };
   } catch (err) {
-    console.log(err);
     return {
       props: {
         order: {},

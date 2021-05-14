@@ -1,8 +1,10 @@
-import Container from 'react-bootstrap/Container';
-import MonthlyMenu from '../components/MonthlyMenu';
 import axios from 'axios';
-import HeadMeta from '../components/HeadMeta';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
+import Container from 'react-bootstrap/Container';
+
+const HeadMeta = dynamic(() => import('../components/HeadMeta'));
+const MonthlyMenu = dynamic(() => import('../components/MonthlyMenu'));
 
 const RamzanSpecial = ({ iftarMenu, seherMenu }) => {
   const router = useRouter();
@@ -12,8 +14,8 @@ const RamzanSpecial = ({ iftarMenu, seherMenu }) => {
       <>
         <HeadMeta
           name='Ramazan Special'
-          title={`Best Seher, Iftar and Dinner Deal. Homemade iftar and dinner delivery. Available in Islamabad, Karachi, and Lahore`}
-          desc={`Seher, Iftar and Dinner Menu. 1 person serving, 1 paratha, 1 chapati, and free delivery. PKR 8500`}
+          title='Best Seher, Iftar and Dinner Deal. Homemade iftar and dinner delivery. Available in Islamabad, Karachi, and Lahore'
+          desc='Seher, Iftar and Dinner Menu. 1 person serving, 1 paratha, 1 chapati, and free delivery. PKR 8500'
           currentUrl={router.pathname}
         />
 
@@ -51,9 +53,9 @@ const RamzanSpecial = ({ iftarMenu, seherMenu }) => {
         </section>
       </>
     );
-  } else {
-    return <h2 className='py-5'>Loading...</h2>;
   }
+
+  return <h2 className='py-5'>Loading...</h2>;
 };
 
 export const getStaticProps = async () => {

@@ -1,13 +1,15 @@
+import axios from 'axios';
+import Link from 'next/link';
+import { useState } from 'react';
+import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
-import Testimonials from '../../components/Testimonials';
-import axios from 'axios';
-import Link from 'next/link';
-import HeadMeta from '../../components/HeadMeta';
+import Image from 'next/image';
+
+const HeadMeta = dynamic(() => import('../../components/HeadMeta'));
+const Testimonials = dynamic(() => import('../../components/Testimonials'));
 
 const FoodDealDetail = ({ deal }) => {
   const router = useRouter();
@@ -31,7 +33,12 @@ const FoodDealDetail = ({ deal }) => {
           <Row>
             <Col lg={6}>
               <div className='position-sticky' style={{ top: '100px' }}>
-                <Image className='rounded pr-4' src={deal.image} fluid />
+                <Image
+                  className='rounded pr-4'
+                  src={deal.image}
+                  width={700}
+                  height={500}
+                />
               </div>
             </Col>
             <Col lg={6}>
@@ -39,6 +46,7 @@ const FoodDealDetail = ({ deal }) => {
                 <h1 className='font-weight-bold'>{deal.name}</h1>
                 <div className='d-flex my-4'>
                   <button
+                    type='button'
                     onClick={() => setServings(3)}
                     className={`${
                       servings === 3 ? 'active' : ''
@@ -47,6 +55,7 @@ const FoodDealDetail = ({ deal }) => {
                     3 Servings
                   </button>
                   <button
+                    type='button'
                     onClick={() => setServings(5)}
                     className={`${
                       servings === 5 ? 'active' : ''

@@ -1,8 +1,12 @@
-import DailyDealsList from '../../components/DailyDealsList';
-import Testimonials from '../../components/Testimonials';
-import DealsSocialProof from '../../components/DealsSocialProof';
-import HeadMeta from '../../components/HeadMeta';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
+
+const HeadMeta = dynamic(() => import('../../components/HeadMeta'));
+const DailyDealsList = dynamic(() => import('../../components/DailyDealsList'));
+const Testimonials = dynamic(() => import('../../components/Testimonials'));
+const DealsSocialProof = dynamic(() =>
+  import('../../components/DealsSocialProof')
+);
 
 const FoodDeals = ({ dailyDeals }) => {
   const router = useRouter();
@@ -11,7 +15,7 @@ const FoodDeals = ({ dailyDeals }) => {
     <>
       <HeadMeta
         name='Food Deals'
-        title={`Homemade Tasty Food Delivery in Lahore, Karachi and Islamabad`}
+        title='Homemade Tasty Food Delivery in Lahore, Karachi and Islamabad'
         desc={`Lunch.pk is Pakistan's best website to Order homemade food online. order homemade lunch to your office or home. delivery in Lahore, Islamabad, Karachi and More`}
         currentUrl={router.pathname}
       />

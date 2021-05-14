@@ -1,8 +1,10 @@
-import Container from 'react-bootstrap/Container';
-import MonthlyMenu from '../../components/MonthlyMenu';
 import axios from 'axios';
-import HeadMeta from '../../components/HeadMeta';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
+import Container from 'react-bootstrap/Container';
+
+const HeadMeta = dynamic(() => import('../../components/HeadMeta'));
+const MonthlyMenu = dynamic(() => import('../../components/MonthlyMenu'));
 
 const MonthlyMenus = ({ menus }) => {
   const router = useRouter();
@@ -11,8 +13,8 @@ const MonthlyMenus = ({ menus }) => {
     <>
       <HeadMeta
         name='Monthly Menus'
-        title={`Homemade Food - Lunch Dinner - order food online Islamabad, Lahore, Karachi`}
-        desc={`Economy Menu. You will get 4 chapati, 2 dish ( 2 persons serving ) , salad, raita delivered at your doorstep. PKR 8500`}
+        title='Homemade Food - Lunch Dinner - order food online Islamabad, Lahore, Karachi'
+        desc='Economy Menu. You will get 4 chapati, 2 dish ( 2 persons serving ) , salad, raita delivered at your doorstep. PKR 8500'
         currentUrl={router.pathname}
       />
       <section
@@ -54,8 +56,6 @@ export const getStaticProps = async () => {
       revalidate: 60,
     };
   } catch (err) {
-    console.log(err);
-
     return {
       props: {
         menus: [],

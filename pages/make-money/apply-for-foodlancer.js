@@ -1,43 +1,49 @@
+import axios from 'axios';
+import * as Yup from 'yup';
+import dynamic from 'next/dynamic';
+import { useState } from 'react';
 import { Formik, Form } from 'formik';
-import { TextInput } from '../../components/Inputs';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import YoutubeVideosList from '../../components/YoutubeVideosList';
-import Message from '../../components/Message';
-import * as Yup from 'yup';
-import { useState } from 'react';
-import axios from 'axios';
-import HeadMeta from '../../components/HeadMeta';
 import { useRouter } from 'next/router';
 
-const ApplyForFoodlancer = () => {
-  const videos = [
-    {
-      title: 'Foodlaner 1',
-      url: 'https://www.youtube.com/embed/1DtpVa9sYP4',
-      width: 480,
-      height: 280,
-    },
-    {
-      title: 'Foodlaner 2',
-      url: 'https://www.youtube.com/embed/-9CPDNJpGMw',
-      width: 480,
-      height: 280,
-    },
-    {
-      title: 'Foodlaner 3',
-      url: 'https://www.youtube.com/embed/zL9C6LEyIUM',
-      width: 480,
-      height: 280,
-    },
-    {
-      title: 'Foodlaner 4',
-      url: 'https://www.youtube.com/embed/JQ_oDYD3ybk',
-      width: 480,
-      height: 280,
-    },
-  ];
+const HeadMeta = dynamic(() => import('../../components/HeadMeta'));
+const Message = dynamic(() => import('../../components/Message'));
+const YoutubeVideosList = dynamic(() =>
+  import('../../components/YoutubeVideosList')
+);
+const TextInput = dynamic(() =>
+  import('../../components/Inputs').then((mod) => mod.TextInput)
+);
 
+const videos = [
+  {
+    title: 'Foodlaner 1',
+    url: 'https://www.youtube.com/embed/1DtpVa9sYP4',
+    width: 480,
+    height: 280,
+  },
+  {
+    title: 'Foodlaner 2',
+    url: 'https://www.youtube.com/embed/-9CPDNJpGMw',
+    width: 480,
+    height: 280,
+  },
+  {
+    title: 'Foodlaner 3',
+    url: 'https://www.youtube.com/embed/zL9C6LEyIUM',
+    width: 480,
+    height: 280,
+  },
+  {
+    title: 'Foodlaner 4',
+    url: 'https://www.youtube.com/embed/JQ_oDYD3ybk',
+    width: 480,
+    height: 280,
+  },
+];
+
+const ApplyForFoodlancer = () => {
   const router = useRouter();
 
   const [activeStep, setActiveStep] = useState(1);
@@ -63,8 +69,8 @@ const ApplyForFoodlancer = () => {
     <>
       <HeadMeta
         name='Apply for Foodlancer'
-        title={`Apply for Foodlancer | Make Money with Lunch.pk`}
-        desc={`Lunch.pk offers you guaranteed customers in your area. Turn your cooking passion into your business. Fill in the form and start earning money from your home`}
+        title='Apply for Foodlancer | Make Money with Lunch.pk'
+        desc='Lunch.pk offers you guaranteed customers in your area. Turn your cooking passion into your business. Fill in the form and start earning money from your home'
         currentUrl={router.pathname}
       />
 

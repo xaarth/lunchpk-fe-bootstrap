@@ -1,8 +1,14 @@
-import FrozenFoodsList from '../../components/FrozenFoodsList';
-import Testimonials from '../../components/Testimonials';
-import DealsSocialProof from '../../components/DealsSocialProof';
-import HeadMeta from '../../components/HeadMeta';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
+
+const FrozenFoodsList = dynamic(() =>
+  import('../../components/FrozenFoodsList')
+);
+const Testimonials = dynamic(() => import('../../components/Testimonials'));
+const DealsSocialProof = dynamic(() =>
+  import('../../components/DealsSocialProof')
+);
+const HeadMeta = dynamic(() => import('../../components/HeadMeta'));
 
 const FrozenFood = ({ frozenFoods }) => {
   const router = useRouter();
@@ -11,7 +17,7 @@ const FrozenFood = ({ frozenFoods }) => {
     <>
       <HeadMeta
         name='Frozen Foods'
-        title={`Homemade Tasty Frozen Food Delivery in Lahore, Karachi, Islamabad and More`}
+        title='Homemade Tasty Frozen Food Delivery in Lahore, Karachi, Islamabad and More'
         desc={`Lunch.pk is Pakistan's best website to Order homemade food online. order homemade frozen food to your office or home. Available in Lahore, Islamabad, Karachi and More`}
         currentUrl={router.pathname}
       />

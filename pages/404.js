@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
-import HeadMeta from '../components/HeadMeta';
+
+const HeadMeta = dynamic(() => import('../components/HeadMeta'));
 
 const NotFound = () => {
   const router = useRouter();
@@ -11,7 +13,7 @@ const NotFound = () => {
     setTimeout(() => {
       router.push('/');
     }, 3000);
-  }, []);
+  }, [router]);
 
   return (
     <>
