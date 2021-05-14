@@ -21,7 +21,7 @@ const HomeCorporateMenu = () => {
           >
             <div className='text-center mb-4'>
               <Image
-                src='/assets/img/office-guys.png'
+                src='/assets/img/office-guys.webp'
                 alt='corporate package'
                 width='250'
                 fluid

@@ -28,7 +28,7 @@ const HomeFoodlancer = () => {
             <div className='text-center'>
               <Image
                 className='d-none d-lg-inline-block'
-                src='/assets/img/make-money.png'
+                src='/assets/img/make-money.webp'
                 fluid
                 alt='make money with lunch.pk'
               />

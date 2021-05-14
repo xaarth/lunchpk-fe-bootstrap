@@ -40,7 +40,7 @@ export default function Home() {
       <Showcase
         title={`Homemade Food by Families ${location}`}
         desc={`At Lunch.pk, You get homemade food by local families ${location.toLowerCase()}. We provide <strong>REAL HYGIENIC</strong> homemade food delivered to your doorstep. Available in Islamabad, Lahore, Karachi and more`}
-        imgSrc='/assets/img/hero-char.png'
+        imgSrc='/assets/img/hero-char.webp'
         btnVariant='cta-btn cta-btn-primary cta-btn-lg'
         btnText='See Our Menu'
         btnLink='/monthly-menu'
