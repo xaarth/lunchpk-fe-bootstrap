@@ -476,6 +476,11 @@ module.exports = {
         permanent: true,
       },
       {
+        source: '/monthly-menu/[slug]',
+        destination: '/monthly-menu',
+        permanent: true,
+      },
+      {
         source: '/township-lahore',
         destination: '/?loc=Township Lahore',
         permanent: true,
