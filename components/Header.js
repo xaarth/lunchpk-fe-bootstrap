@@ -56,16 +56,6 @@ const Header = () => {
                   Executive Menu
                 </a>
               </Link>
-              <Link href='/monthly-menu/iftar-and-dinner'>
-                <a onClick={handleCloseNavMenu} className='dropdown-item'>
-                  Iftar and Dinner
-                </a>
-              </Link>
-              <Link href='/monthly-menu/seher-menu'>
-                <a onClick={handleCloseNavMenu} className='dropdown-item'>
-                  Seher Menu
-                </a>
-              </Link>
               <Link href='/monthly-menu/weight-loss-diet-plan'>
                 <a onClick={handleCloseNavMenu} className='dropdown-item'>
                   Weight Loss Diet Menu
