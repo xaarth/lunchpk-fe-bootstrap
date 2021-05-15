@@ -1,12 +1,12 @@
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
+
 import { useRouter } from 'next/router';
 import Container from 'react-bootstrap/Container';
 
-const StepsList = dynamic(() => import('../../components/StepsList'));
 import MonthlyMenu from '../../components/MonthlyMenu';
-const FaqsList = dynamic(() => import('../../components/FaqsList'));
-const WeeklyTrial = dynamic(() => import('../../components/WeeklyTrial'));
+import FaqsList from '../../components/FaqsList';
+import WeeklyTrial from '../../components/WeeklyTrial';
+import StepsList from '../../components/StepsList';
 import HeadMeta from '../../components/HeadMeta';
 
 const steps = [
@@ -79,8 +79,8 @@ const MonthlyMenuDetail = ({ menu }) => {
     <>
       <HeadMeta
         name={`${menu.name} - Monthly Menu`}
-        title={`${menu.name} | ${menu.priceCurrency} ${menu.price} |Homemade lunch and dinner delivery service - Islamabad LHR KHI`}
-        desc={`${menu.name} - Lunch.pk is your #1 choice for tasty and healthy homemade food delivered by families near you. Lhr, Isb, and Khi`}
+        title={`${menu.name}. ${menu.priceCurrency} ${menu.price} - Delivery in Islamabad, Lahore, and Karachi`}
+        desc={`${menu.name}. - Lunch.pk is your #1 choice for tasty and healthy homemade food delivered by families near you. Lahore, Islamabad, and Karachi`}
         currentUrl={router.pathname}
       />
 
