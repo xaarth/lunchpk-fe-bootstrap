@@ -464,11 +464,7 @@ module.exports = {
         destination: '/?loc=Islamabad',
         permanent: true,
       },
-      {
-        source: '/ghar-ka-khana/:anything*',
-        destination: '/ghar-ka-khana',
-        permanent: true,
-      },
+
       {
         source: '/valencia-town',
         destination: '/?loc=Valencia Town',
