@@ -20,14 +20,14 @@ const FoodDealDetail = ({ deal, deals }) => {
   useEffect(() => {
     let isMounted = true;
 
-    if (isMounted) {
+    if (isMounted && deal) {
       setOtherDeals(deals.filter((item) => item._id !== deal._id).slice(0, 8));
     }
 
     return () => {
       isMounted = false;
     };
-  }, [deals, deal._id]);
+  }, [deals, deal]);
 
   if (router.isFallback) {
     return <div>Loading...</div>;
