@@ -17,9 +17,9 @@ const DealsList = ({ title, deals }) => (
             detailLink={`/food-deals/${deal.slug}/`}
           >
             <h3 className='title'>{deal.name}</h3>
-            <p className='desc'>{deal.description}</p>
-            <h6 className='delivery-time text-color-primary'>
-              {deal.deliveryTime}
+            <p className='desc '>{deal.description}</p>
+            <h6 className='delivery-time'>
+              Ready to dispatch in {deal.deliveryTime}
             </h6>
           </DealItem>
         </Col>

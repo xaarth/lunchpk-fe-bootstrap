@@ -1,12 +1,9 @@
-import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 
 import HeadMeta from '../../components/HeadMeta';
-const DailyDealsList = dynamic(() => import('../../components/DailyDealsList'));
-const Testimonials = dynamic(() => import('../../components/Testimonials'));
-const DealsSocialProof = dynamic(() =>
-  import('../../components/DealsSocialProof')
-);
+import DailyDealsList from '../../components/DailyDealsList';
+import Testimonials from '../../components/Testimonials';
+import DealsSocialProof from '../../components/DealsSocialProof';
 
 const FoodDeals = ({ dailyDeals }) => {
   const router = useRouter();
@@ -28,9 +25,7 @@ const FoodDeals = ({ dailyDeals }) => {
       >
         {dailyDeals.length ? (
           <DailyDealsList title='Daily Deals' deals={dailyDeals} />
-        ) : (
-          ''
-        )}
+        ) : null}
 
         <DealsSocialProof />
 

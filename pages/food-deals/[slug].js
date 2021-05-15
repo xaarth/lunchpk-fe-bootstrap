@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -9,11 +9,25 @@ import Image from 'next/image';
 
 import HeadMeta from '../../components/HeadMeta';
 import Testimonials from '../../components/Testimonials';
+import DailyDealsList from '../../components/DailyDealsList';
 
-const FoodDealDetail = ({ deal }) => {
+const FoodDealDetail = ({ deal, deals }) => {
   const router = useRouter();
 
   const [servings, setServings] = useState(3);
+  const [otherDeals, setOtherDeals] = useState(null);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    if (isMounted) {
+      setOtherDeals(deals.filter((item) => item._id !== deal._id).slice(0, 8));
+    }
+
+    return () => {
+      isMounted = false;
+    };
+  }, [deals, deal._id]);
 
   if (router.isFallback) {
     return <div>Loading...</div>;
@@ -71,7 +85,10 @@ const FoodDealDetail = ({ deal }) => {
                 <p className='font-weight-bold mb-2'>
                   Its not just TASTY. Its HEALTHY too!
                 </p>
-                <p style={{ fontSize: '1rem' }}>{deal.deliveryTime}</p>
+                <p className='mb-1' style={{ fontSize: '1rem' }}>
+                  Ready to dispatch in {deal.deliveryTime}
+                </p>
+                <p style={{ fontSize: '1rem' }}>Free Delivery</p>
                 <Link href={`/place-an-order/${deal._id}/DailyDeal`}>
                   <a className='cta-btn cta-btn-primary'>Order Now</a>
                 </Link>
@@ -79,6 +96,12 @@ const FoodDealDetail = ({ deal }) => {
             </Col>
           </Row>
         </Container>
+      </section>
+
+      <section style={{ paddingBottom: '5rem' }}>
+        {otherDeals && otherDeals.length ? (
+          <DailyDealsList title='You may also like' deals={otherDeals} />
+        ) : null}
       </section>
 
       <section style={{ padding: '5rem 0', background: 'rgb(245, 248, 250)' }}>
@@ -93,9 +116,14 @@ export const getStaticProps = async ({ params }) => {
     `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/daily-deals/${params.slug}`
   );
 
+  const { data: deals } = await axios.get(
+    `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/daily-deals`
+  );
+
   return {
     props: {
       deal: data,
+      deals,
     },
   };
 };

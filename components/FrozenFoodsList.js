@@ -20,7 +20,7 @@ const FrozenFoodsList = ({ title, deals }) => (
             <p style={{ fontSize: '14px' }} className='pieces mb-1'>
               {deal.pieces} pieces
             </p>
-            <h6 className='delivery-time text-color-primary'>
+            <h6 className='price text-color-primary'>
               {deal.priceCurrency} {deal.price}
             </h6>
           </DealItem>
