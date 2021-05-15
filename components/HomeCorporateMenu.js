@@ -4,7 +4,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'next/image';
 
-const HomeCorporateMenu = () => (
+const HomeCorporateMenu = ({
+  title = 'Order Homemade Food For Your Office',
+}) => (
   <section
     className=''
     style={{
@@ -32,9 +34,7 @@ const HomeCorporateMenu = () => (
           md={12}
           lg={8}
         >
-          <h2 className='font-weight-bold mb-4'>
-            Order Homemade Food For Your Office
-          </h2>
+          <h2 className='font-weight-bold mb-4'>{title}</h2>
           <p className='mb-4'>
             We ensure quality of food and services. we hold your payment in{' '}
             <br />

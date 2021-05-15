@@ -466,12 +466,7 @@ module.exports = {
       },
       {
         source: '/ghar-ka-khana/:anything*',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/ghar-ka-khana',
-        destination: '/',
+        destination: '/ghar-ka-khana',
         permanent: true,
       },
       {
