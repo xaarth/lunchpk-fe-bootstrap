@@ -88,7 +88,6 @@ const FoodDealDetail = ({ deal, deals }) => {
                 <p className='mb-1' style={{ fontSize: '1rem' }}>
                   Ready to dispatch in {deal.deliveryTime}
                 </p>
-                <p style={{ fontSize: '1rem' }}>Free Delivery</p>
                 <Link href={`/place-an-order/${deal._id}/DailyDeal`}>
                   <a className='cta-btn cta-btn-primary'>Order Now</a>
                 </Link>
