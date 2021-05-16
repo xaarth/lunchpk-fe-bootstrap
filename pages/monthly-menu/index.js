@@ -23,19 +23,21 @@ const MonthlyMenus = ({ menus }) => {
         }}
       >
         <Container>
-          {menus.map((menu) => (
-            <MonthlyMenu
-              key={menu._id}
-              name={menu.name}
-              desc={menu.description}
-              price={`${menu.priceCurrency} ${menu.price}`}
-              orderLink={`/place-an-order/${menu._id}/MonthlyMenu`}
-              week1Menu={menu.week1Menu}
-              week2Menu={menu.week2Menu}
-              week3Menu={menu.week3Menu}
-              week4Menu={menu.week4Menu}
-            />
-          ))}
+          {menus
+            .filter((menu) => menu.published === true)
+            .map((menu) => (
+              <MonthlyMenu
+                key={menu._id}
+                name={menu.name}
+                desc={menu.description}
+                price={`${menu.priceCurrency} ${menu.price}`}
+                orderLink={`/place-an-order/${menu._id}/MonthlyMenu`}
+                week1Menu={menu.week1Menu}
+                week2Menu={menu.week2Menu}
+                week3Menu={menu.week3Menu}
+                week4Menu={menu.week4Menu}
+              />
+            ))}
         </Container>
       </section>
     </>
