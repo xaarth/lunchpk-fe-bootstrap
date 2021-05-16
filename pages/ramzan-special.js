@@ -26,11 +26,11 @@ const RamzanSpecial = ({ iftarMenu, seherMenu }) => {
         >
           <Container>
             <MonthlyMenu
-              key={iftarMenu._id}
+              key={iftarMenu.}
               name={iftarMenu.name}
               desc={iftarMenu.description}
               price={`${iftarMenu.priceCurrency} ${iftarMenu.price}`}
-              orderLink={`/place-an-order/${iftarMenu._id}/MonthlyMenu`}
+              orderLink={`/place-an-order/${iftarMenu.}/MonthlyMenu`}
               week1Menu={iftarMenu.week1Menu}
               week2Menu={iftarMenu.week2Menu}
               week3Menu={iftarMenu.week3Menu}
@@ -38,11 +38,11 @@ const RamzanSpecial = ({ iftarMenu, seherMenu }) => {
             />
 
             <MonthlyMenu
-              key={seherMenu._id}
+              key={seherMenu.}
               name={seherMenu.name}
               desc={seherMenu.description}
               price={`${seherMenu.priceCurrency} ${seherMenu.price}`}
-              orderLink={`/place-an-order/${seherMenu._id}/MonthlyMenu`}
+              orderLink={`/place-an-order/${seherMenu.}/MonthlyMenu`}
               week1Menu={seherMenu.week1Menu}
               week2Menu={seherMenu.week2Menu}
               week3Menu={seherMenu.week3Menu}

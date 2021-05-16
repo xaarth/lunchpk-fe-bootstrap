@@ -27,11 +27,11 @@ const MonthlyMenus = ({ menus }) => {
             .filter((menu) => menu.published === true)
             .map((menu) => (
               <MonthlyMenu
-                key={menu._id}
+                key={menu.id}
                 name={menu.name}
                 desc={menu.description}
                 price={`${menu.priceCurrency} ${menu.price}`}
-                orderLink={`/place-an-order/${menu._id}/MonthlyMenu`}
+                orderLink={`/place-an-order/${menu.id}/MonthlyMenu`}
                 week1Menu={menu.week1Menu}
                 week2Menu={menu.week2Menu}
                 week3Menu={menu.week3Menu}

@@ -107,7 +107,7 @@ const PlaceAnOrder = () => {
                     resetForm();
                     setSubmitting(false);
 
-                    router.push(`/thank-you/${res.data._id}`);
+                    router.push(`/thank-you/${res.data.}`);
                   } else {
                     setSubmitting(false);
 

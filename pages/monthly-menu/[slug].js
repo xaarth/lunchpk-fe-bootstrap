@@ -93,11 +93,11 @@ const MonthlyMenuDetail = ({ menu }) => {
         <Container>
           {Object.keys(menu).length ? (
             <MonthlyMenu
-              key={menu._id}
+              key={menu.id}
               name={menu.name}
               desc={menu.description}
               price={`${menu.priceCurrency} ${menu.price}`}
-              orderLink={`/place-an-order/${menu._id}/MonthlyMenu`}
+              orderLink={`/place-an-order/${menu.id}/MonthlyMenu`}
               week1Menu={menu.week1Menu}
               week2Menu={menu.week2Menu}
               week3Menu={menu.week3Menu}
@@ -127,7 +127,7 @@ const MonthlyMenuDetail = ({ menu }) => {
             kitchen, we have number of <br /> family kitchens near you to meet
             your needs.
           </p>
-          <Link href={`/place-an-order/${menu._id}/MonthlyMenu`}>
+          <Link href={`/place-an-order/${menu.id}/MonthlyMenu`}>
             <a className='cta-btn cta-lg cta-btn-primary'>Order Now</a>
           </Link>
         </Container>
@@ -140,7 +140,7 @@ const MonthlyMenuDetail = ({ menu }) => {
 
       <FaqsList title='Frequently Asked Questions' items={faqs} />
 
-      <WeeklyTrial menuId={menu._id} price={weeklyPrice} />
+      <WeeklyTrial menuId={menu.id} price={weeklyPrice} />
     </>
   );
 };

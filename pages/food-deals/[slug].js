@@ -21,7 +21,7 @@ const FoodDealDetail = ({ deal, deals }) => {
     let isMounted = true;
 
     if (isMounted && deal) {
-      setOtherDeals(deals.filter((item) => item._id !== deal._id).slice(0, 8));
+      setOtherDeals(deals.filter((item) => item. !== deal.).slice(0, 8));
     }
 
     return () => {
@@ -89,7 +89,7 @@ const FoodDealDetail = ({ deal, deals }) => {
                   Ready to dispatch in {deal.deliveryTime}
                 </p>
                 <p style={{ fontSize: '1rem' }}>Free Delivery</p>
-                <Link href={`/place-an-order/${deal._id}/DailyDeal`}>
+                <Link href={`/place-an-order/${deal.}/DailyDeal`}>
                   <a className='cta-btn cta-btn-primary'>Order Now</a>
                 </Link>
               </div>

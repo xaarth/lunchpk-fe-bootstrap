@@ -1,14 +1,9 @@
-import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 
-const FrozenFoodsList = dynamic(() =>
-  import('../../components/FrozenFoodsList')
-);
-const Testimonials = dynamic(() => import('../../components/Testimonials'));
-const DealsSocialProof = dynamic(() =>
-  import('../../components/DealsSocialProof')
-);
 import HeadMeta from '../../components/HeadMeta';
+import FrozenFoodsList from '../../components/FrozenFoodsList';
+import DealsSocialProof from '../../components/DealsSocialProof';
+import Testimonials from '../../components/Testimonials';
 
 const FrozenFood = ({ frozenFoods }) => {
   const router = useRouter();
