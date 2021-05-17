@@ -103,7 +103,7 @@ const ApplyForFoodlancer = () => {
                 name: values.name,
                 kitchenName: values.kitchenName,
                 phone: values.phone,
-                email: values.email,
+                email: values.email.toLowerCase(),
                 address: {
                   street: values.street,
                   city: values.city,
