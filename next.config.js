@@ -171,7 +171,7 @@ module.exports = {
       },
       {
         source: '/kari-pakora',
-        destination: '/food-deals',
+        destination: '/food-deals/kari-pakora',
         permanent: true,
       },
       {
@@ -281,7 +281,7 @@ module.exports = {
       },
       {
         source: '/dishes/kari-pakora',
-        destination: '/food-deals',
+        destination: '/food-deals/kari-pakora',
         permanent: true,
       },
       {
@@ -431,7 +431,7 @@ module.exports = {
       },
       {
         source: '/monthly-menu/keemamatar-5',
-        destination: '/monthly-menu',
+        destination: '/food-deals/aloo-keema',
         permanent: true,
       },
       {
