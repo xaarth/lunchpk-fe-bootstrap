@@ -125,6 +125,7 @@ export const getStaticProps = async ({ params }) => {
       deal: data,
       deals,
     },
+    revalidate: 10,
   };
 };
 

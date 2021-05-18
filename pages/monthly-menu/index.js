@@ -54,7 +54,7 @@ export const getStaticProps = async () => {
       props: {
         menus: data,
       },
-      revalidate: 60,
+      revalidate: 10,
     };
   } catch (err) {
     return {
