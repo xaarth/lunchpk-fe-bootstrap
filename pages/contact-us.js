@@ -50,7 +50,6 @@ const faqs = [
 
 const Contact = () => {
   const router = useRouter();
-
   const [message, setMessage] = useState({});
 
   return (
@@ -117,11 +116,13 @@ const Contact = () => {
                   <Formik
                     initialValues={{
                       name: '',
+                      email: '',
                       phone: '',
                       message: '',
                     }}
                     validationSchema={Yup.object({
                       name: Yup.string().min(3).max(30).required(),
+                      email: Yup.string().email().required(),
                       phone: Yup.string()
                         .min(10, 'Invalid phone number')
                         .max(13, 'Invalid phone number')
@@ -152,7 +153,7 @@ const Contact = () => {
 
                             setMessage({
                               variant: 'danger',
-                              text: 'An internal error occured',
+                              text: 'Something went wrong, try again later',
                             });
 
                             setTimeout(() => {
@@ -182,7 +183,18 @@ const Contact = () => {
                     {(props) => (
                       <Form>
                         <TextInput type='text' label='Your name' name='name' />
-                        <TextInput type='text' label='Phone' name='phone' />
+                        <Row>
+                          <Col lg={6}>
+                            <TextInput type='text' label='Email' name='email' />
+                          </Col>
+                          <Col lg={6}>
+                            <TextInput
+                              type='text'
+                              label='Phone or Whatsapp'
+                              name='phone'
+                            />
+                          </Col>
+                        </Row>
                         <TextareaInput
                           label='Message'
                           name='message'

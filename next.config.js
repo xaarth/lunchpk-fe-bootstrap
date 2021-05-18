@@ -31,7 +31,7 @@ module.exports = {
       },
       {
         source: '/bonelesshandi',
-        destination: '/food-deals',
+        destination: '/food-deals/boneless-handi',
         permanent: true,
       },
       {
@@ -276,7 +276,7 @@ module.exports = {
       },
       {
         source: '/bonelesshandi/butter-chicken',
-        destination: '/food-deals',
+        destination: '/food-deals/boneless-handi',
         permanent: true,
       },
       {
@@ -361,7 +361,7 @@ module.exports = {
       },
       {
         source: '/food-deals-2/pasta/feed',
-        destination: '/food-deals',
+        destination: '/food-deals/chicken-macaroni',
         permanent: true,
       },
       {
