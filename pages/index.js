@@ -32,8 +32,16 @@ export default function Home() {
     <>
       <HeadMeta
         name='Home'
-        title='Order Homemade Food Online - Lunch Dinner Delivery Service in Islamabad, Lahore, Karachi'
-        desc='Lunch.pk is Pakistan #1 website to order homemade food, lunch and dinner online. Delivery in Lahore, Karachi, Islamabad, Rawalpindi and more.'
+        title={
+          location !== 'Near You'
+            ? `Homemade Food Delivery - Lunch Dinner - ${location}`
+            : 'Order Homemade Food Online - Lunch Dinner Delivery Service in Islamabad, Lahore, Karachi'
+        }
+        desc={
+          location !== 'Near You'
+            ? `Lunch.pk is Pakistan #1 website to order homemade food in ${location}. You get tasty and healthy food cooked and delivered by families near you.`
+            : 'Lunch.pk is Pakistan #1 website to order homemade food, lunch and dinner online. Delivery in Lahore, Karachi, Islamabad, Rawalpindi and more.'
+        }
         currentUrl={router.pathname}
       />
 
