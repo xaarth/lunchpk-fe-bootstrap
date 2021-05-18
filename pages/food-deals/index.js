@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import axios from 'axios';
 
 import HeadMeta from '../../components/HeadMeta';
 import DailyDealsList from '../../components/DailyDealsList';
@@ -40,14 +41,13 @@ const FoodDeals = ({ dailyDeals }) => {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch(
+  const { data } = await axios.get(
     `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/daily-deals`
   );
-  const dailyDeals = await res.json();
 
   return {
     props: {
-      dailyDeals,
+      dailyDeals: data,
     },
     revalidate: 10,
   };

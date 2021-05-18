@@ -45,24 +45,16 @@ const MonthlyMenus = ({ menus }) => {
 };
 
 export const getStaticProps = async () => {
-  try {
-    const { data } = await axios.get(
-      `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/monthly-menus`
-    );
+  const { data } = await axios.get(
+    `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/monthly-menus`
+  );
 
-    return {
-      props: {
-        menus: data,
-      },
-      revalidate: 10,
-    };
-  } catch (err) {
-    return {
-      props: {
-        menus: [],
-      },
-    };
-  }
+  return {
+    props: {
+      menus: data,
+    },
+    revalidate: 10,
+  };
 };
 
 export default MonthlyMenus;

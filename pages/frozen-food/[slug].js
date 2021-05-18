@@ -8,12 +8,19 @@ import Container from 'react-bootstrap/Container';
 
 import HeadMeta from '../../components/HeadMeta';
 import Testimonials from '../../components/Testimonials';
+import DealDetailSkeleton from '../../components/DealDetailSkeleton';
 
 const FrozenFoodDetail = ({ deal }) => {
   const router = useRouter();
 
   if (router.isFallback) {
-    return <div>Loading...</div>;
+    return (
+      <section style={{ padding: '130px 0' }}>
+        <Container>
+          <DealDetailSkeleton />
+        </Container>
+      </section>
+    );
   }
 
   return (
@@ -66,9 +73,18 @@ const FrozenFoodDetail = ({ deal }) => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const { data } = await axios.get(
+  const { data, status } = await axios.get(
     `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/frozen-foods/${params.slug}`
   );
+
+  if (status !== 200) {
+    return {
+      redirect: {
+        destination: '/404',
+        permanent: false,
+      },
+    };
+  }
 
   return {
     props: {

@@ -1,7 +1,10 @@
 import Link from 'next/link';
-
+import axios from 'axios';
 import { useRouter } from 'next/router';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Skeleton from 'react-loading-skeleton';
 
 import MonthlyMenu from '../../components/MonthlyMenu';
 import FaqsList from '../../components/FaqsList';
@@ -72,7 +75,21 @@ const MonthlyMenuDetail = ({ menu }) => {
   }
 
   if (router.isFallback) {
-    return <div>Loading...</div>;
+    return (
+      <section style={{ padding: '3.125rem 0 130px' }}>
+        <Container>
+          <Row>
+            <Col className='text-center mx-auto' lg={8}>
+              <Skeleton className='mb-3' width={400} height={20} />
+              <Skeleton className='mb-3' />
+              <Skeleton className='mb-3' width={200} />
+              <Skeleton className='mb-3' height={250} />
+              <Skeleton className='mb-3' height={250} />
+            </Col>
+          </Row>
+        </Container>
+      </section>
+    );
   }
 
   return (
@@ -145,25 +162,32 @@ const MonthlyMenuDetail = ({ menu }) => {
   );
 };
 
-export const getStaticProps = async (context) => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/monthly-menus/${context.params.slug}`
+export const getStaticProps = async ({ params }) => {
+  const { data, status } = await axios.get(
+    `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/monthly-menus/${params.slug}`
   );
-  const menu = await res.json();
+
+  if (status !== 200) {
+    return {
+      redirect: {
+        destination: '/404',
+        permanent: false,
+      },
+    };
+  }
 
   return {
     props: {
-      menu,
+      menu: data,
     },
     revalidate: 10,
   };
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch(
+  const { data: menus } = await axios.get(
     `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/monthly-menus`
   );
-  const menus = await res.json();
 
   const slugs = menus.map((menu) => menu.slug);
 

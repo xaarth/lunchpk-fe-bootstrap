@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import axios from 'axios';
 
 import HeadMeta from '../../components/HeadMeta';
 import FrozenFoodsList from '../../components/FrozenFoodsList';
@@ -42,14 +43,13 @@ const FrozenFood = ({ frozenFoods }) => {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch(
+  const { data } = await axios.get(
     `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/frozen-foods`
   );
-  const frozenFoods = await res.json();
 
   return {
     props: {
-      frozenFoods,
+      frozenFoods: data,
     },
     revalidate: 10,
   };
