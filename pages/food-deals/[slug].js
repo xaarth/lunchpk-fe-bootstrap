@@ -119,11 +119,23 @@ const FoodDealDetail = ({ deal, deals }) => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const { data, status } = await axios.get(
-    `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/daily-deals/${params.slug}`
-  );
+  try {
+    const { data } = await axios.get(
+      `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/daily-deals/${params.slug}`
+    );
 
-  if (status !== 200) {
+    const { data: deals } = await axios.get(
+      `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/daily-deals`
+    );
+
+    return {
+      props: {
+        deal: data,
+        deals,
+      },
+      revalidate: 10,
+    };
+  } catch {
     return {
       redirect: {
         destination: '/404',
@@ -131,18 +143,6 @@ export const getStaticProps = async ({ params }) => {
       },
     };
   }
-
-  const { data: deals } = await axios.get(
-    `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/daily-deals`
-  );
-
-  return {
-    props: {
-      deal: data,
-      deals,
-    },
-    revalidate: 10,
-  };
 };
 
 export const getStaticPaths = async () => {

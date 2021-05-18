@@ -163,11 +163,18 @@ const MonthlyMenuDetail = ({ menu }) => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const { data, status } = await axios.get(
-    `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/monthly-menus/${params.slug}`
-  );
+  try {
+    const { data } = await axios.get(
+      `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/monthly-menus/${params.slug}`
+    );
 
-  if (status !== 200) {
+    return {
+      props: {
+        menu: data,
+      },
+      revalidate: 10,
+    };
+  } catch {
     return {
       redirect: {
         destination: '/404',
@@ -175,13 +182,6 @@ export const getStaticProps = async ({ params }) => {
       },
     };
   }
-
-  return {
-    props: {
-      menu: data,
-    },
-    revalidate: 10,
-  };
 };
 
 export const getStaticPaths = async () => {
