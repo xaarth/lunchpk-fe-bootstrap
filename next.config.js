@@ -10,6 +10,11 @@ module.exports = {
         permanent: true,
       },
       {
+        source: '/rubab-kitchen/chutney-1',
+        destination: '/food-deals',
+        permanent: true,
+      },
+      {
         source: '/dalchawal',
         destination: '/food-deals/dalchawal',
         permanent: true,
