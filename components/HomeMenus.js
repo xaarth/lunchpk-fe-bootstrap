@@ -26,7 +26,7 @@ const HomeMenus = () => (
         <Col className='mb-4' md={6} lg={4}>
           <HomeMenuCard
             name='Economy Menu'
-            price='PKR 8500/-'
+            price='PKR 9500/-'
             btnText='See Menu'
             btnLink='/monthly-menu/mazedar-menu/'
             desc=' For 2 persons (1 time meal) <br /> Mon - Fri (22 days a month) '
