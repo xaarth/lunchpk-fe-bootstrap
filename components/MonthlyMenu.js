@@ -34,7 +34,7 @@ const MonthlyMenu = ({
         </thead>
         <tbody>
           {weekDays.map((day, index) => (
-            <tr key={index}>
+            <tr key={day}>
               <td>{day}</td>
               <td>{week1Menu[index]}</td>
               <td>{week2Menu[index]}</td>
@@ -52,7 +52,7 @@ const MonthlyMenu = ({
         </thead>
         <tbody>
           {weekDays.map((day, index) => (
-            <tr key={index}>
+            <tr key={day}>
               <td>{day}</td>
               <td>{week3Menu[index]}</td>
               <td>{week4Menu[index]}</td>

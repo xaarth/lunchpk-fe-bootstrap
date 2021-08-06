@@ -1,32 +1,28 @@
-## How to setup
+## Env Variables
 
-Install all the dependencies:
+Create a .env.local file in the root of the project and add the following
+
+```
+NODE_ENV
+NEXT_PUBLIC_RAPI_HOST
+NEXT_PUBLIC_FE_HOST
+```
+
+## Install Dependencies
 
 ```bash
-npm i
+npm install
 ```
 
-Then create a new file in the root ".env.local" and these variables
-
-```
-NEXT_PUBLIC_RAPI_HOST = https://api.lunch.pk
-NEXT_PUBLIC_FE_HOST = https://www.lunch.pk
-```
-
-Finally, run the dev server:
+## Run Dev Server
 
 ```bash
 npm run dev
 ```
 
-To test the production version. first compile the code like so
+## Build & Run Production Server
 
 ```bash
 npm run build
-```
-
-and then run server the production server:
-
-```bash
-npm run start
+npm start
 ```
