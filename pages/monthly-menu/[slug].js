@@ -189,7 +189,7 @@ export const getStaticPaths = async () => {
     `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/monthly-menus`
   );
 
-  const slugs = menus.map((menu) => menu.slug);
+  const slugs = menus.results.map((menu) => menu.slug);
 
   const paths = slugs.map((slug) => ({ params: { slug } }));
 

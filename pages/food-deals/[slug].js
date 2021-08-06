@@ -150,7 +150,7 @@ export const getStaticPaths = async () => {
     `${process.env.NEXT_PUBLIC_RAPI_HOST}/api/daily-deals`
   );
 
-  const slugs = deals.map((deal) => deal.slug);
+  const slugs = deals.results.map((deal) => deal.slug);
 
   const paths = slugs.map((slug) => ({ params: { slug } }));
 

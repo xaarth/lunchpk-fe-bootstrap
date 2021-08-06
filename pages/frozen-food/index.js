@@ -49,7 +49,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      frozenFoods: data,
+      frozenFoods: data.results,
     },
     revalidate: 10,
   };
