@@ -22,7 +22,9 @@ const FoodDealDetail = ({ deal, deals }) => {
     let isMounted = true;
 
     if (isMounted && deal) {
-      setOtherDeals(deals.filter((item) => item.id !== deal.id).slice(0, 8));
+      setOtherDeals(
+        deals.results.filter((item) => item.id !== deal.id).slice(0, 8)
+      );
     }
 
     return () => {
