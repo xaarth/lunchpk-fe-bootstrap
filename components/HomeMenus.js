@@ -5,21 +5,21 @@ import HomeMenuCard from './HomeMenuCard';
 
 const HomeMenus = () => (
   <section
-    className='text-white text-center'
+    className='text-center text-white'
     style={{
       padding: '4.375rem 0 3.125rem',
       background: '#425b76',
     }}
   >
     <Container>
-      <h2 className='font-weight-bold mb-5'>Our Popular Monthly Menus</h2>
+      <h2 className='mb-5 font-weight-bold'>Our Popular Monthly Menus</h2>
       <Row className=''>
         <Col className='mb-4' md={6} lg={4}>
           <HomeMenuCard
             name='Mazedar Menu'
             price='PKR 5000/-'
             btnText='See Menu'
-            btnLink='/monthly-menu/economy-menu/'
+            btnLink='/monthly-menu/mazedar-menu/'
             desc='For 1 persons (1 time meal) <br /> Mon - Fri (22 days a month)'
           />
         </Col>
@@ -28,7 +28,7 @@ const HomeMenus = () => (
             name='Economy Menu'
             price='PKR 9500/-'
             btnText='See Menu'
-            btnLink='/monthly-menu/mazedar-menu/'
+            btnLink='/monthly-menu/economy-menu/'
             desc=' For 2 persons (1 time meal) <br /> Mon - Fri (22 days a month) '
           />
         </Col>
