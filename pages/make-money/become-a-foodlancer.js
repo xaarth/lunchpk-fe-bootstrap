@@ -14,7 +14,7 @@ const steps = [
   },
   {
     title: `Send your Kitchen Pics`,
-    desc: `Send us 3 pictures of your kitchen on whatsapp at +92 335 5517720`,
+    desc: `Send us 3 pictures of your kitchen on WhatsApp at +92 335 5517720`,
     img: `/assets/img/kitchen-pictures.svg`,
   },
   {
@@ -27,7 +27,7 @@ const steps = [
 const faqs = [
   {
     question: 'Who is our ideal team member?',
-    answer: `We are following 2 simple prinicples. #1 Serve hygienic tasty homemade food #2 Empower food passionate woman If food is your craft and you don’t settle with average taste… you are someone who cooks from the heart… then you are in the right place, we are waiting for you to join our food passionate family. Lets thrive together!`,
+    answer: `We are following 2 simple principles. #1 Serve hygienic tasty homemade food #2 Empower food passionate woman If food is your craft and you don’t settle with average taste… you are someone who cooks from the heart… then you are in the right place, we are waiting for you to join our food passionate family. Lets thrive together!`,
   },
   {
     question: 'Who is a foodlancer?',
@@ -47,9 +47,9 @@ const faqs = [
     question: 'How to apply as a foodlancer?',
     answer: `Joining lunch.pk is a simple 5 step process. <br />
     1- Fill in the register form <br />
-    2- Send us 3 snaps of your kitchen from different angles on whatsapp at +92 335 5517720 <br />
+    2- Send us 3 snaps of your kitchen from different angles on WhatsApp at +92 335 5517720 <br />
     3- Let our team test 3 different demo dishes and visit your kitchen <br />
-    4- Ability to use facebook messenger, whatsapp and emails <br />
+    4- Ability to use facebook messenger, WhatsApp and emails <br />
     5- Have a rider available either from your family or 3rd party companies to deliver food within 5-10 KMs of your area.`,
   },
   {

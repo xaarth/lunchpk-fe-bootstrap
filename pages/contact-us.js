@@ -19,8 +19,8 @@ const faqs = [
     answer: `We are available in 4 cities and expanding. Lahore, Karachi, Islamabad and Rawalpindi. We will be available in more cities soon.`,
   },
   {
-    question: 'Are You Availabe In My Area or Street?',
-    answer: `You can simply send us your location on whatsapp at +92 333 5189005 and we'll share details and menus for your area`,
+    question: 'Are You Available In My Area or Street?',
+    answer: `You can simply send us your location on WhatsApp at +92 333 5189005 and we'll share details and menus for your area`,
   },
   {
     question: 'What Makes Lunch.pk Different From Other Food Portals?',
