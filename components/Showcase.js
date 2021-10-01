@@ -73,7 +73,6 @@ const Showcase = ({
         <Col className='text-center' lg={6}>
           <div className='d-none d-lg-block showcase-img'>
             <Image
-              style={{ width: '80%' }}
               src={imgSrc}
               alt={imgAlt || title}
               width={400}

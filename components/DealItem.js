@@ -7,9 +7,9 @@ const DealItem = ({ image, title, detailLink, children }) => (
       <div
         className='image'
         style={{
-          height: '190px',
-          borderTopLeftRadius: '.75rem',
-          borderTopRightRadius: '.75rem',
+          height: '250px',
+          borderTopLeftRadius: '.25rem',
+          borderTopRightRadius: '.25rem',
           overflow: 'hidden',
         }}
       >
