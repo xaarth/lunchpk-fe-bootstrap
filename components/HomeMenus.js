@@ -46,4 +46,10 @@ const HomeMenus = () => (
   </section>
 );
 
+export const getStaticProps = async (context) => {
+  return {
+    props: {},
+  };
+};
+
 export default HomeMenus;
