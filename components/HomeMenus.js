@@ -35,7 +35,7 @@ const HomeMenus = () => (
         <Col className='mb-4' md={12} lg={4}>
           <HomeMenuCard
             name='Executive Menu'
-            price='PKR 6000/-'
+            price='PKR 7500/-'
             btnText='See Menu'
             btnLink='/monthly-menu/executive-menu/'
             desc='For 1 person (1 time meal) <br /> Mon - Sat (26 days a month)'
@@ -45,7 +45,5 @@ const HomeMenus = () => (
     </Container>
   </section>
 );
-
-
 
 export default HomeMenus;
