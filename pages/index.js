@@ -35,7 +35,7 @@ export default function Home() {
         title={
           location !== 'Near You'
             ? `Homemade Food Delivery - Lunch Dinner - ${location}`
-            : 'Order Homemade Food Online - Lunch Dinner Delivery Service in Islamabad, Lahore, Karachi'
+            : 'Homemade Food - Order Homemade Food Online | Lunch.pk'
         }
         desc={
           location !== 'Near You'
