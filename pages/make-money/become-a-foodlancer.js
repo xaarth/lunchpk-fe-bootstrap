@@ -102,7 +102,17 @@ const BecomeAFoodlancer = () => {
       />
       <Showcase
         title='Join Our Food Passionate Family!'
-        desc='If food is your craft and you don’t settle with average taste. you are someone who cooks from the heart. then you are in the right place, we are waiting for you to join our food passionate family. <br /> <span class="d-block mt-3 font-weight-bold">No Investments, No Security Deposits, No Lengthy Procedures</span>'
+        desc={
+          <p>
+            If food is your craft and you don’t settle with average taste. you
+            are someone who cooks from the heart. then you are in the right
+            place, we are waiting for you to join our food passionate family.
+            <br />
+            <span className='d-block mt-3 font-weight-bold'>
+              No Investments, No Security Deposits, No Lengthy Procedures
+            </span>
+          </p>
+        }
         imgSrc='/assets/img/make-money.webp'
         btnVariant='cta-btn cta-btn-primary cta-btn-lg'
         btnText='Apply Now'

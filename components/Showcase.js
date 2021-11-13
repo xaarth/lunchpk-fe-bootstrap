@@ -56,14 +56,15 @@ const Showcase = ({
             >
               {title}
             </h1>
-            <p
+            <div
               className='subtitle mb-4'
               style={{
                 fontSize: '18px',
                 lineHeight: '30px',
               }}
-              dangerouslySetInnerHTML={{ __html: desc }}
-            />
+            >
+              {desc}
+            </div>
             <Link href={btnLink}>
               <a className={`${btnVariant} see-menu-btn`}>{btnText}</a>
             </Link>

@@ -12,7 +12,7 @@ const HomeFoodlancer = () => (
           <h2 className='font-weight-bold mb-4'>
             Do You Love <span className='text-color-primary'>Cooking?</span>
           </h2>
-          <p>Join us as a foodlancer and start selling homemade food.</p>
+          <p>Join us as a foodlancer and start selling homemade food online.</p>
           <p>
             Lunch.pk is a true home based business that empowers food passionate
             families by giving them an opportunity to sell homemade food on the

@@ -29,7 +29,14 @@ export default function Home() {
 
       <Showcase
         title='Order Ghar ka khana by Families Near You'
-        desc='At Lunch.pk, You get <strong>Ghar ka khana</strong> by local families near you. We provide <strong>REAL HYGIENIC</strong> ghar ka khana delivered to your door. Available in Islamabad, Lahore, Karachi and more'
+        desc={
+          <p>
+            At Lunch.pk, You get <strong>Ghar ka khana</strong> by local
+            families near you. We provide <strong>REAL HYGIENIC</strong> ghar ka
+            khana delivered to your door. Available in Islamabad, Lahore,
+            Karachi and more
+          </p>
+        }
         imgSrc='/assets/img/hero-char.webp'
         btnVariant='cta-btn cta-btn-primary cta-btn-lg'
         btnText='See Our Menu'
