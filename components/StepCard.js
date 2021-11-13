@@ -16,11 +16,9 @@ const StepCard = ({ imgSrc, text, desc, stepNum }) => (
       {stepNum}
     </h2>
     <Image className='mb-3' src={imgSrc} width={70} height={105} alt={text} />
-    <h5
-      dangerouslySetInnerHTML={{ __html: text }}
-      className='mb-0'
-      style={{ fontWeight: '600' }}
-    />
+    <h5 className='mb-0' style={{ fontWeight: '600' }}>
+      {text}
+    </h5>
     {desc && (
       <p style={{ fontSize: '14px', lineHeight: '20px' }} className='mt-2 mb-0'>
         {desc}

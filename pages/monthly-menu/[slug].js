@@ -151,7 +151,11 @@ const MonthlyMenuDetail = ({ menu }) => {
       </section>
 
       <StepsList
-        title='Order in <span class="text-color-primary">3 Simple Steps</span>'
+        title={
+          <>
+            Order in <span className='text-color-primary'>3 Simple Steps</span>
+          </>
+        }
         steps={steps}
       />
 

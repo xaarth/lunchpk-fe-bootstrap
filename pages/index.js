@@ -62,7 +62,11 @@ export default function Home() {
       />
 
       <StepsList
-        title='Order in <span class="text-color-primary">3 Simple Steps</span>'
+        title={
+          <>
+            Order in <span className='text-color-primary'>3 Simple Steps</span>
+          </>
+        }
         ctaText='Payment: Bank transfer (recommended), Cash to Rider, EasyPaisa'
         steps={steps}
       />

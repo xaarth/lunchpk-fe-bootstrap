@@ -123,7 +123,12 @@ const BecomeAFoodlancer = () => {
       />
 
       <StepsList
-        title='Join Lunch.pk in <span class="text-color-primary">3 Simple Steps</span>'
+        title={
+          <>
+            Join Lunch.pk in{' '}
+            <span className='text-color-primary'>3 Simple Steps</span>
+          </>
+        }
         steps={steps}
         ctaBtn='Join Us'
         ctaBtnLink='/make-money/apply-for-foodlancer/'

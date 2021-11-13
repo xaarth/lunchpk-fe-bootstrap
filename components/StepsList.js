@@ -11,12 +11,7 @@ const StepsList = ({ title, ctaText, ctaBtn, ctaBtnLink, steps }) => (
     style={{ padding: '4.375rem 0 3.125rem', background: '#f5f8fa' }}
   >
     <Container>
-      <h2
-        className='font-weight-bold'
-        dangerouslySetInnerHTML={{
-          __html: title,
-        }}
-      />
+      <h2 className='font-weight-bold'>{title}</h2>
       <Row className='mt-5'>
         {steps.map((step, index) => (
           <Col key={step.title} className='mb-5' lg={4}>
@@ -29,14 +24,7 @@ const StepsList = ({ title, ctaText, ctaBtn, ctaBtnLink, steps }) => (
           </Col>
         ))}
       </Row>
-      {ctaText && (
-        <p
-          dangerouslySetInnerHTML={{
-            __html: ctaText,
-          }}
-          className='font-weight-bold'
-        />
-      )}
+      {ctaText && <p className='font-weight-bold'>{ctaText}</p>}
 
       {ctaBtn && (
         <Link href={ctaBtnLink}>

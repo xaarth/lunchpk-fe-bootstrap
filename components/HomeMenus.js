@@ -20,7 +20,11 @@ const HomeMenus = () => (
             price='PKR 5000/-'
             btnText='See Menu'
             btnLink='/monthly-menu/mazedar-menu/'
-            desc='For 1 persons (1 time meal) <br /> Mon - Fri (22 days a month)'
+            desc={
+              <>
+                For 1 persons (1 time meal) <br /> Mon - Fri (22 days a month)
+              </>
+            }
           />
         </Col>
         <Col className='mb-4' md={6} lg={4}>
@@ -29,7 +33,11 @@ const HomeMenus = () => (
             price='PKR 9500/-'
             btnText='See Menu'
             btnLink='/monthly-menu/economy-menu/'
-            desc=' For 2 persons (1 time meal) <br /> Mon - Fri (22 days a month) '
+            desc={
+              <>
+                For 2 persons (1 time meal) <br /> Mon - Fri (22 days a month)
+              </>
+            }
           />
         </Col>
         <Col className='mb-4' md={12} lg={4}>
@@ -38,7 +46,11 @@ const HomeMenus = () => (
             price='PKR 7500/-'
             btnText='See Menu'
             btnLink='/monthly-menu/executive-menu/'
-            desc='For 1 person (1 time meal) <br /> Mon - Sat (26 days a month)'
+            desc={
+              <>
+                For 1 person (1 time meal) <br /> Mon - Sat (26 days a month)
+              </>
+            }
           />
         </Col>
       </Row>
