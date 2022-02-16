@@ -49,7 +49,7 @@ export default function Home() {
         title={`Homemade Food by Families ${location}`}
         desc={
           <p>
-            At Lunch.pk, You get homemade food by local families $
+            At Lunch.pk, You get homemade food by local families{' '}
             {location.toLowerCase()}. We provide <strong>REAL HYGIENIC</strong>{' '}
             homemade food online delivery. Available in Islamabad, Lahore,
             Karachi and more
