@@ -22,8 +22,8 @@ export default function Home() {
     <>
       <HeadMeta
         name='Home'
-        title='Ghar ka khana - Lunch Dinner - Homemade Food Delivery Service in Islamabad, Lahore, Karachi'
-        desc='Lunch.pk is Pakistan #1 to order ghar ka khana. You get tasty and healthy food cooked and delivered by families near you. lahore karachi islamabad'
+        title='Ghar ka khana, order online - islamabad, lahore , karachi'
+        desc='Lunch.pk is the best website to order homemade lunch, dinner,  ghar ka khana, order online in islamabad lahore and karachi.'
         currentUrl={router.pathname}
       />
 

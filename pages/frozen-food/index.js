@@ -13,8 +13,8 @@ const FrozenFood = ({ frozenFoods }) => {
     <>
       <HeadMeta
         name='Frozen Foods'
-        title='Homemade Tasty Frozen Food Delivery in Lahore, Karachi, Islamabad and More'
-        desc={`Lunch.pk is Pakistan's best website to Order homemade food online. order homemade frozen food to your office or home. Available in Lahore, Islamabad, Karachi and More`}
+        title='Frozen food delivery, homemade, Islamabad, Lahore , Karachi'
+        desc='Lunch.pk is the best website frozen food delivery, in islamabad lahore and karachi.'
         currentUrl={router.pathname}
       />
       <section

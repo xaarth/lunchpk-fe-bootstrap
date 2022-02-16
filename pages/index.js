@@ -35,12 +35,12 @@ export default function Home() {
         title={
           location !== 'Near You'
             ? `Homemade Food Delivery - Lunch Dinner - ${location}`
-            : 'Homemade Food - Order Homemade Food Online | Lunch.pk'
+            : 'Lunch, dinner, homemade food delivery, order online | Lunch.pk'
         }
         desc={
           location !== 'Near You'
             ? `Lunch.pk is Pakistan #1 website to order homemade food in ${location}. You get tasty and healthy food cooked and delivered by families near you.`
-            : 'Lunch.pk is Pakistan #1 website to order homemade food, lunch and dinner online. Delivery in Lahore, Karachi, Islamabad, Rawalpindi and more.'
+            : 'Lunch.pk is the best website to order homemade lunch, dinner, in islamabad lahore and karachi.lunch, dinner, homemade food delivery, order online, food delivery'
         }
         currentUrl={router.pathname}
       />
