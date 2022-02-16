@@ -21,6 +21,30 @@ const metas = {
     title: 'Best daal chawal delivery online - islamabad , lahore, karachi',
     desc: 'Lunch.pk is the best website to order homemade lunch, dinner, in islamabad lahore and karachi.',
   },
+  'mutton-karahi': {
+    title: 'Best mutton karahi delivery online, islamabad, lahore, karachi',
+    desc: 'Lunch.pk is the best website to order best mutton karahi delivery online, in islamabad lahore and karachi.',
+  },
+  chickenbiryani: {
+    title: 'Best chicken biryani order online, islamabad, lahore, karachi',
+    desc: 'Lunch.pk is the best website to order homemadebest chicken biryani order online, in islamabad lahore and karachi.',
+  },
+  'chicken-korma': {
+    title: 'Chicken qorma daig,order korma online, Islamabad, Lahore, Karachi',
+    desc: 'Lunch.pk is the best website to order homemade chicken qorma daig,order korma online, for lunch or dinner, in islamabad lahore and karachi.',
+  },
+  'kari-pakora': {
+    title: 'Best kari pakora, order online, Islamabad Lahore Karachi',
+    desc: 'Lunch.pk is the best website to order homemade best kari pakora in islamabad lahore and karachi.',
+  },
+  'chicken-jalfrezi': {
+    title: 'Best chicken jalfrezi, order online, Islamabad Lahore Karachi',
+    desc: 'Lunch.pk is the best website to order homemade best chicken jalfrezi for lunch, dinner, in islamabad lahore and karachi.',
+  },
+  'boneless-handi': {
+    title: 'Chicken boneless handi, order online, Islamabad Lahore Karachi',
+    desc: 'Lunch.pk is the best website to order homemade best chicken boneless handi for lunch, dinner, in islamabad lahore and karachi.',
+  },
 };
 
 const FoodDealDetail = ({ deal, deals }) => {
@@ -56,8 +80,16 @@ const FoodDealDetail = ({ deal, deals }) => {
     <>
       <HeadMeta
         name={`${deal.name} - Food Deal`}
-        title={metas[deal.slug].title}
-        desc={metas[deal.slug].desc}
+        title={
+          metas[deal.slug]
+            ? metas[deal.slug].title
+            : `${deal.name} | Home delivery by lunch.pk - Lahore , Islamabad, Karachi`
+        }
+        desc={
+          metas[deal.slug]
+            ? metas[deal.slug].desc
+            : `Have no time for cooking or tired of low quality food. Enjoy Lunch.pk tasty ${deal.name} deal delivered to your door. Lahore, Islamabad and Karachi`
+        }
         currentUrl={router.pathname}
       />
       <section style={{ padding: '7rem 0' }}>
