@@ -12,9 +12,19 @@ import HeadMeta from '../../components/HeadMeta';
 import Testimonials from '../../components/Testimonials';
 import DailyDealsList from '../../components/DailyDealsList';
 
+const metas = {
+  'aloo-keema': {
+    title: 'Aloo Keema order online, daig, Islamabad Lahore Karachi',
+    desc: 'Lunch.pk is the best website to order homemade Aloo Keema for lunch, dinner, in islamabad lahore and karachi.',
+  },
+  dalchawal: {
+    title: 'Best daal chawal delivery online - islamabad , lahore, karachi',
+    desc: 'Lunch.pk is the best website to order homemade lunch, dinner, in islamabad lahore and karachi.',
+  },
+};
+
 const FoodDealDetail = ({ deal, deals }) => {
   const router = useRouter();
-
   const [servings, setServings] = useState(3);
   const [otherDeals, setOtherDeals] = useState(null);
 
@@ -46,8 +56,8 @@ const FoodDealDetail = ({ deal, deals }) => {
     <>
       <HeadMeta
         name={`${deal.name} - Food Deal`}
-        title={`${deal.name} | Home delivery by lunch.pk - Lahore , Islamabad, Karachi`}
-        desc={`Have no time for cooking or tired of low quality food. Enjoy Lunch.pk tasty ${deal.name} deal delivered to your door. Lahore, Islamabad and Karachi`}
+        title={metas[deal.slug].title}
+        desc={metas[deal.slug].desc}
         currentUrl={router.pathname}
       />
       <section style={{ padding: '7rem 0' }}>
