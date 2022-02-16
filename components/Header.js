@@ -41,24 +41,9 @@ const Header = () => {
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='mr-auto'>
             <NavDropdown title='Monthly Menu' id='basic-nav-dropdown'>
-              <Link href='/monthly-menu/economy-menu'>
+              <Link href='/monthly-menu/corporate-menu'>
                 <a onClick={handleCloseNavMenu} className='dropdown-item'>
-                  Economy Menu
-                </a>
-              </Link>
-              <Link href='/monthly-menu/mazedar-menu'>
-                <a onClick={handleCloseNavMenu} className='dropdown-item'>
-                  Mazedar Menu
-                </a>
-              </Link>
-              <Link href='/monthly-menu/executive-menu'>
-                <a onClick={handleCloseNavMenu} className='dropdown-item'>
-                  Executive Menu
-                </a>
-              </Link>
-              <Link href='/monthly-menu/weight-loss-diet-plan'>
-                <a onClick={handleCloseNavMenu} className='dropdown-item'>
-                  Weight Loss Diet Menu
+                  Corporate Menu (10 Persons)
                 </a>
               </Link>
               <Link href='/monthly-menu/2-time-meal'>
@@ -66,9 +51,24 @@ const Header = () => {
                   Lunch + Dinner (2 Time Meal)
                 </a>
               </Link>
-              <Link href='/monthly-menu/corporate-menu'>
+              <Link href='/monthly-menu/executive-menu'>
                 <a onClick={handleCloseNavMenu} className='dropdown-item'>
-                  Corporate Menu (10 Persons)
+                  Executive Menu
+                </a>
+              </Link>
+              <Link href='/monthly-menu/economy-menu'>
+                <a onClick={handleCloseNavMenu} className='dropdown-item'>
+                  Economy Menu
+                </a>
+              </Link>
+              <Link href='/monthly-menu/weight-loss-diet-plan'>
+                <a onClick={handleCloseNavMenu} className='dropdown-item'>
+                  Weight Loss Diet Menu
+                </a>
+              </Link>
+              <Link href='/monthly-menu/mazedar-menu'>
+                <a onClick={handleCloseNavMenu} className='dropdown-item'>
+                  Mazedar Menu
                 </a>
               </Link>
               <Link href='/monthly-menu/high-blood-pressure-diet'>
