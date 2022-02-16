@@ -20,6 +20,10 @@ class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'
             rel='stylesheet'
           />
+          <meta
+            name='ahrefs-site-verification'
+            content='6dc3b7a8ea2d6e76a734011b8c22479a7914b3f2ad0a64b89db4a742906f102d'
+          />
         </Head>
         <body>
           <Main />
