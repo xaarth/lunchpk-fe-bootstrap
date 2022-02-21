@@ -96,7 +96,11 @@ const MonthlyMenuDetail = ({ menu }) => {
     <>
       <HeadMeta
         name={`${menu.name} - Monthly Menu`}
-        title={`${menu.name}. ${menu.priceCurrency} ${menu.price} - Delivery in Islamabad, Lahore, and Karachi`}
+        title={
+          menu.slug === 'weight-loss-diet-plan'
+            ? 'diet food delivery, weight loss, islamabad , lahore, karachi'
+            : `${menu.name}. ${menu.priceCurrency} ${menu.price} - Delivery in Islamabad, Lahore, and Karachi`
+        }
         desc={`${menu.name}. - Lunch.pk is your #1 choice for tasty and healthy homemade food delivered by families near you. Lahore, Islamabad, and Karachi`}
         currentUrl={router.pathname}
       />
