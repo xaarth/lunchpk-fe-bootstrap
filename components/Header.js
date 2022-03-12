@@ -40,6 +40,19 @@ const Header = () => {
         <Navbar.Toggle onClick={() => setExpanded((prevState) => !prevState)} />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='mr-auto'>
+            <Link href='/ramzan-special'>
+              <a
+                onClick={handleCloseNavMenu}
+                className='nav-link'
+                style={{ display: 'flex', alignItems: 'center' }}
+              >
+                <span className='mr-2' role='img' aria-label='Fire'>
+                  🔥
+                </span>
+                <span>Ramadan Menu</span>
+              </a>
+            </Link>
+
             <NavDropdown title='Monthly Menu' id='basic-nav-dropdown'>
               <Link href='/monthly-menu/corporate-menu'>
                 <a onClick={handleCloseNavMenu} className='dropdown-item'>
