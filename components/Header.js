@@ -40,7 +40,7 @@ const Header = () => {
         <Navbar.Toggle onClick={() => setExpanded((prevState) => !prevState)} />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='mr-auto'>
-            <Link href='/ramzan-special'>
+            {/* <Link href='/ramzan-special'>
               <a
                 onClick={handleCloseNavMenu}
                 className='nav-link'
@@ -51,7 +51,7 @@ const Header = () => {
                 </span>
                 <span>Ramadan Menu</span>
               </a>
-            </Link>
+            </Link> */}
 
             <NavDropdown title='Monthly Menu' id='basic-nav-dropdown'>
               <Link href='/monthly-menu/corporate-menu'>
