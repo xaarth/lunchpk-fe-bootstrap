@@ -66,7 +66,7 @@ const MonthlyMenuDetail = ({ menu }) => {
 
   const { slug } = router.query;
 
-  let weeklyPrice = 1750;
+  let weeklyPrice = 2500;
 
   if (slug === 'seher-menu') {
     weeklyPrice = 2250;
